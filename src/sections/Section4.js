@@ -3,14 +3,13 @@ import Image from "next/image";
 
 const Section = styled.section`
   display: flex;
-  padding: 30px 20px;
   background-color: white;
   flex-wrap: wrap;
   
 
 
 `;
-const Item = styled.h1`
+const Item = styled.div`
 
   background-image: linear-gradient(
       0deg,

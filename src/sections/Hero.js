@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { PhoneIcon } from "@/icons/phone-fill";
+import { Button } from "public/Components/Button";
 
 const Section = styled.section`
   width: 100vw;
@@ -22,30 +23,17 @@ const Section = styled.section`
 const Title = styled.h1`
   font-size: 46px;
   color: white;
-  margin: 0 20px 20px;
+  margin: 0 20px 20px ;
+  margin-top: 40px;
 `;
 
 const SubTitle = styled.p`
   font-size: 22px;
   line-height: 1.2;
   letter-spacing: 1px;
-  margin-bottom: 40px;
+
 `;
 
-const Button = styled.button`
-  font-size: 22px;
-  border: none;
-  border-radius: 14px;
-  padding: 14px 20px;
-  background-color: var(--primary-color);
-
-  svg {
-    height: 24px;
-    width: 24px;
-    margin-right: 5px;
-    transform: translateY(5px);
-  }
-`;
 
 export const HeroSection = () => {
   return (
