@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { PhoneIcon } from "@/icons/phone-fill";
-import { Button } from "public/Components/Button";
+import { Button } from "@/Components/Button";
+import { PHONE_NUMBER } from "@/constants";
 
 const Section = styled.section`
   width: 100vw;
@@ -9,6 +10,8 @@ const Section = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: 16px;
+  text-align: center;
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.6),
@@ -17,25 +20,24 @@ const Section = styled.section`
     url(/images/hero.jpeg);
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+
+  @media (min-width: 760px) {
+    font-size: 20px;
+  }
 `;
 
 const Title = styled.h1`
-  font-size: 46px;
+  font-size: 2.3em;
   color: white;
-  margin-bottom: 29px;
-
+  margin-bottom: 0.6em;
 `;
 
 const SubTitle = styled.p`
-  font-size: 22px;
+  font-size: 1.1em;
   line-height: 1.2;
   letter-spacing: 1px;
-  margin-bottom: 29px;
-
-
+  margin-bottom: 1.2em;
 `;
-
 
 export const HeroSection = () => {
   return (
@@ -44,7 +46,7 @@ export const HeroSection = () => {
       <SubTitle>ELEKTRICIEN NODIG? SCHAKEL ONS DIRECT IN.</SubTitle>
       <Button>
         <PhoneIcon />
-        +44 333 222 1111
+        {PHONE_NUMBER}
       </Button>
     </Section>
   );
