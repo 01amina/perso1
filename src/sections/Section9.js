@@ -8,10 +8,11 @@ import Image from "next/image";
 const Section=styled.section`
 
 padding: 150px;
-height: 900px;
+height: 1120px;
 background-color: rgb(25, 36, 48);
 justify-content: space-between;
 display: flex;
+
 
 `;
 const Div=styled.div`
@@ -29,14 +30,22 @@ display: flex;
 `;
 const Div1 = styled.div`
 background-color: rgb(236, 178, 76);
-padding: 0%;
-width: 40%;
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+width: 50%;
+height: 800px;
 `;
 const Div2 = styled.div`
 background-color: white;
 padding: 0%;
-width: 60%;
-height: 600px;
+width: 50%;
+height: 800px;
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
 `;
 const Title= styled.div`
@@ -45,8 +54,8 @@ color: black;
 display: block;
 font-weight: bold;
 text-align: center;
-margin-bottom: 60px;
-margin-top: 100px;
+margin-bottom: 19px;
+
 
 
 `;
@@ -55,14 +64,18 @@ font-size: 17px;
 color: black;
 text-align: center;
 display: block;
-margin-bottom: 40px;
-margin-left: 20px;
+margin-left: 80px;
+margin-right: 80px;
+line-height: 30px;
+
+
 `;
 const Social= styled.div`
 display: block;
 text-align: center;
 margin-top: 30px;
 `;
+
 
 
 
@@ -86,7 +99,8 @@ export const Section9 =()=>{
                 <a style={{marginRight:'20px'}} > <Image src={`/images/fb.png` } width='20' height={20} ></Image></a>
                 <a style={{marginRight:'20px'}} > <Image src={`/images/insta.png` } width='20' height={20} ></Image></a>
                 <a style={{marginRight:'20px'}} ><Image src={`/images/mail.png` } width='20' height={20} ></Image></a></Social>
-                </Div1>
+              </Div1>
+                
                 <Div2>
                     <Title>contact</Title>
        <form>
@@ -103,7 +117,7 @@ export const Section9 =()=>{
             <textarea style={{display: 'block',
 margin: 'auto', width: '400px',
 height: '70px', backgroundColor:'white'}} ></textarea>
-<Button style={{ marginTop:'10px' }} >
+<Button style={{ marginTop:'10px',display:'block',textAlign:'center',margin:'auto',marginTop:'20px' }} >
     VERZENDEN
 </Button>
            </form>

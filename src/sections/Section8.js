@@ -2,45 +2,41 @@ import styled from "styled-components";
 
 const Section = styled.section`
 display: flex;
-justify-content: center;
 padding: 40px 20px;
 background-color: white;
 `;
 
-const Item = styled.h1`
-margin-right: 20px;
-  background-image: url(${({ img }) => {
+const Item = styled.div`
+display: inline-block;
+margin: auto;
+background-image: url(${({ img }) => {
     return img;
   }});
   background-repeat: no-repeat;
-  background-size:170px;
-  flex: 1;
-  border: 1px solid lightgray;
-  border-radius: 8px;
+  background-size:90px;
   color: white;
   padding: 90px;
   min-width: 25%;
-box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 22%);
+
 
   
 `;
 const Text=styled.div`
-display: block;
+
 font-size: 17px;
-margin-left: 80px;
-margin-right: -90px;
 color: rgb(85,85,85);
 font-weight: lighter;
+margin-top:-80px ;
 
 `;
 const Sub=styled.div`
 color: black;
-margin-top: 20px;
+
 text-align: end;
 margin-right: -60px;
 font-weight: lighter;
 font-size: 19px;
-margin-bottom: 9px;
+
 `;
 const Sb= styled.div`
 color: black;
@@ -53,7 +49,7 @@ margin-right: -60px;
 export const Section8=()=>{
     return(
     <Section>
-          <Item  img='/images/cl4.png'>
+          <Item img='/images/cl4.png' >
               <Text>Oscar van Elektricien Koning heeft bij ons een nieuwe moderne groepenkast geïnstalleerd. Hij kwam op de afgesproken tijd. Heeft het netjes gemonteerd. Ik ben er erg blij mee. Oscar is een echte vakman. Hij is erg communicatief en reageert snel op emailtjes. Aanrader!</Text>
               <Sub>Marieke de jong</Sub>
               <Sb style={{ marginRight:'-30px'}} >Facebook</Sb>

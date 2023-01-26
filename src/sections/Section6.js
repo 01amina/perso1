@@ -81,7 +81,7 @@ return(
 Dag en nacht bereikbaar,
 Meterkast vervangen,
 storingdienst...</Ul>
-<Button style={{marginTop:'30px'}} >+44 333 222 1111</Button>
+<Button style={{ marginTop:'10px',display:'block',textAlign:'center',margin:'auto',marginTop:'30px' }} >+44 333 222 1111</Button>
     </Div2>
 </Section>
 

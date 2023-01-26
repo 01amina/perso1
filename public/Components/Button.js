@@ -9,9 +9,7 @@ font-size: 22px;
   border-radius: 14px;
   padding: 14px 20px;
   background-color: var(--primary-color);
-  display: block;
-  margin: auto;
- text-align: center;
+
   svg {
     height: 24px;
     width: 24px;

@@ -23,14 +23,16 @@ const Section = styled.section`
 const Title = styled.h1`
   font-size: 46px;
   color: white;
-  margin: 0 20px 20px ;
-  margin-top: 40px;
+  margin-bottom: 29px;
+
 `;
 
 const SubTitle = styled.p`
   font-size: 22px;
   line-height: 1.2;
   letter-spacing: 1px;
+  margin-bottom: 29px;
+
 
 `;
 

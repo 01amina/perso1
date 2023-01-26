@@ -7,7 +7,7 @@ import { PhoneIcon } from "@/icons/phone-fill";
 
 const Section = styled.section `
 display: flex;
-padding-top: 0px;
+padding-top: 2px;
 padding-bottom: 0px;
 background-color: #fcb900;
 justify-content: space-between;
@@ -31,7 +31,7 @@ export const Section5 = ()=>{
 <div> 
     
   <H1>Elektricien Koning 24/7 Nooddienst</H1>
-  <Button>  <PhoneIcon/> Bel ons</Button>
+  <Button  style={{ marginTop:'10px',display:'block',textAlign:'center',margin:'auto',marginTop:'20px' }}>  <PhoneIcon/> Bel ons</Button>
 
 </div>
 

@@ -21,12 +21,11 @@ const Item = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   flex: 1;
-  border: 1px solid lightgray;
-  border-radius: 8px;
   color: white;
   background-color: #2854ad;
-  padding: 100px;
+  padding: 140px;
   min-width: 25%;
+
 
   
   
@@ -35,6 +34,7 @@ const Item = styled.div`
 export const Section4 = () => {
   return (
     <Section>
+
       <Item img='/images/sec1.jpeg'>
         <p>Elektrotechniek</p>
       </Item>
