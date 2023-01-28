@@ -1,41 +1,86 @@
-import Image from "next/image";
 import styled from "styled-components";
-import { Button } from "public/Components/Button";
+import styles from '@/styles/Home.module.css'
+import { Button as button } from "@/Components/Button";
 import { PhoneIcon } from "@/icons/phone-fill";
 
 
-
 const Section = styled.section `
+width: 100%;
+min-height: 370px;
 display: flex;
-padding-top: 2px;
-padding-bottom: 0px;
-background-color: #fcb900;
-justify-content: space-between;
+
+flex-wrap: wrap;
+
 
 `;
 
-const H1 = styled.div`
-color: white;
-font-size: 39px;
-display: block;
-margin-top: 140px;
-margin-left: 10px;
-margin-bottom: 50px;
- text-align: center;
+
+const Image = styled.img `
+background-image: url(/images/Sback1.jpeg);
+background-repeat: no-repeat;
+background-size: cover;
+min-width: 250px;
+flex: 50%;
+min-height: 300px;
+`;
+
+const Content = styled.div `
+width: 100%;
+height: auto;
+display: flex;
+flex-wrap: wrap;
+text-align: center;
+`;
+const RightContent = styled.div `
+display: grid;
+place-items: center;
+flex: 50%;
+min-width: 150px;
+min-height: 200px;
+background-color: rgb(236, 178, 76);
+`;
+const RContent=styled.div`
 
 `;
+
+const Title = styled.div `
+min-width: 200px;
+line-height: 6vh;
+font-size: 30px;
+flex: 50%;
+@media (max-width : 661px){
+    font-size: 24px;
+    margin-top: 9vh;
+}
+`;
+const Button =styled(button)`
+
+margin-top: 8vh;
+@media (max-width : 661px){
+    margin-top: 0vh;
+}
+`;
+
+
+
 export const Section5 = ()=>{
     return (
 
     <Section>
-<div> 
-    
-  <H1>Elektricien Koning 24/7 Nooddienst</H1>
-  <Button  style={{ marginTop:'10px',display:'block',textAlign:'center',margin:'auto',marginTop:'20px' }}>  <PhoneIcon/> Bel ons</Button>
+<Content>
+  <Image></Image>
 
-</div>
-
-<Image src={`/images/Sback1.jpeg`} width='800' height='420' alt="pet"   />
+  <RightContent>
+    <RContent>
+    <Title>
+    Elektricien Koning 24/7 Nooddienst
+    </Title>
+   
+   <Button>
+      <PhoneIcon/>bel ons
+      </Button></RContent>
+  </RightContent>
+</Content>
     </Section>
 
     );

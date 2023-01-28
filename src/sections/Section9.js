@@ -1,82 +1,140 @@
 import styled from "styled-components";
-import {Label} from "public/components/Label";
-import {Input} from "public/components/Input";
-import { Button } from "public/Components/Button";
+import { Button as button } from "@/Components/Button";
 import Image from "next/image";
+import { PhoneIcon } from "@/icons/phone-fill";
+import { Facebook} from "@/icons/Facebook";
+import { Twitter } from "@/icons/Twitter";
+import { Email } from "@/icons/Email";
+import { Instagram } from "@/icons/Instagram";
 
 
 const Section=styled.section`
-
-padding: 150px;
-height: 1120px;
+width: 100%;
+min-height: 990px;
 background-color: rgb(25, 36, 48);
-justify-content: space-between;
-display: flex;
-
-
+display: grid;
+place-items: center;
 `;
-const Div=styled.div`
-
-padding: 90px;
-margin-top: -50px;
-background-color: white;
-height: 800px;
-width: 900px;
-justify-content: space-between;
+const Sec = styled.div`
+width: 70%;
+max-height: 600px;
+margin: auto;
 display: flex;
-
-
-
+flex-wrap: wrap;
+@media (max-width : 425px){
+ width: 94%;
+ min-height: 690px;
+}
 `;
-const Div1 = styled.div`
+const LeftSide = styled.div`
 background-color: rgb(236, 178, 76);
-display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-width: 50%;
-height: 800px;
+min-width: 250px;
+min-height: 550px;
+flex: 30%;
+padding: 10px;
+display: grid;
+place-items: center;
+@media (max-width : 425px){
+min-width: 250px;
+min-height: 200px;
+padding: 9px;
+}
+
+
 `;
-const Div2 = styled.div`
+const RightSide = styled.div`
 background-color: white;
-padding: 0%;
-width: 50%;
-height: 800px;
-display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+min-width: 250px;
+padding: 10px;
+min-height: 550px;
+display: grid;
+place-items: center;
+flex: 50%;
+@media (max-width : 425px){
+min-width: 250px;
+min-height: 200px;
+padding: 9px;
+}
 
 `;
-const Title= styled.div`
+const Title= styled.h2`
 font-size: 30px;
+margin-bottom: 5vh;
 color: black;
-display: block;
-font-weight: bold;
 text-align: center;
-margin-bottom: 19px;
-
-
+font-weight: bold;
+@media (max-width : 549px){
+    font-size: 1.5em;
+}
 
 `;
-const Text=styled.div`
+const Text=styled.p`
 font-size: 17px;
+line-height: 22px;
+margin-top: 4vh;
 color: black;
 text-align: center;
-display: block;
-margin-left: 80px;
-margin-right: 80px;
-line-height: 30px;
-
+@media (max-width : 320px){
+    font-size: 14px;
+}
 
 `;
 const Social= styled.div`
-display: block;
 text-align: center;
-margin-top: 30px;
+
+`;
+const Input = styled.input`
+background-color: white;
+border-color: initial;
+border-width: 2px;
+border: 1px solid #ddd;
+box-shadow: inset 0 1px 2px rgb(0 0 0 / 10%);
+display: block;
+margin-bottom: 3vh;
+min-width: 220px;
+height: 30px;
+@media (max-width : 320px){
+    margin-bottom: 1vh;
+}
+`;
+const Label = styled.label`
+color: black;
+display: block;
+margin-bottom: 1vh;
+text-align: center;
+font-weight: lighter;
+font-size: .9em;
+@media (max-width : 320px){
+    margin-bottom: 0.2vh;
+}
 `;
 
 
+const Textarea = styled.textarea`
+background-color: white;
+min-width: 220px;
+height: 49px;
+display: block;
+margin: auto;
+`;
+const RightContent = styled.div`
+
+`;
+const LeftContent = styled.div`
+
+`;
+const Media1 = styled.div`
+display: inline-block;
+margin-left: 1.5vh;
+margin-top: 2.9vh;
+`;
+const Button =styled(button)`
+margin-top: 5vh;
+font-size: 1.9vh;
+border-radius: 0;
+
+
+`;
 
 
 
@@ -86,43 +144,49 @@ export const Section9 =()=>{
     return(
 
         <Section>
-           
-                <Div1>
+           <Sec>
+                <LeftSide>
+                    <LeftContent>
                     <Title>
                  Elektricien Koning
                 </Title>
                 <Text>Indien u een vraag heeft over één van onze diensten, dan kunt u het contactformulier invullen. Wij nemen dan zo snel mogelijk contact met u op
-                    <br></br><br></br>Let op: indien uw aanvraag een spoedopdracht betreft, raden wij aan om telefonisch contact met ons op te nemen. Wij zijn 24/7 bereikbaar.
+                    <Text>Let op: indien uw aanvraag een spoedopdracht betreft, raden wij aan om telefonisch contact met ons op te nemen. Wij zijn 24/7 bereikbaar.</Text>
                 </Text>
                 <Social>
-                <a style={{marginRight:'20px'}} ><Image src={`/images/twi.png` } width='20' height={20} ></Image></a>
-                <a style={{marginRight:'20px'}} > <Image src={`/images/fb.png` } width='20' height={20} ></Image></a>
-                <a style={{marginRight:'20px'}} > <Image src={`/images/insta.png` } width='20' height={20} ></Image></a>
-                <a style={{marginRight:'20px'}} ><Image src={`/images/mail.png` } width='20' height={20} ></Image></a></Social>
-              </Div1>
+                    <Media1> <Facebook/> </Media1>
+                    <Media1> <Instagram/></Media1>
+                    <Media1> <Twitter/></Media1>
+                    <Media1><Email/></Media1>
+               
+               
+               
+                </Social>
+                </LeftContent>
+              </LeftSide>
                 
-                <Div2>
+               <RightSide>
+                   <RightContent>
                     <Title>contact</Title>
-       <form>
+      
            <Label>E-mailadres</Label>
-             <br></br>
-            <Input type={'text'} /><br></br>
+             
+            <Input type={'text'} />
             <Label >Telefoonnummer</Label>
-             <br></br>
-            <Input type={'text'} /><br></br>
+             
+            <Input type={'text'} />
             <Label >Onderwerp</Label>
              <br></br>
-            <Input type={'text'} /><br></br>
-            <Label>Bericht</Label><br></br>
-            <textarea style={{display: 'block',
-margin: 'auto', width: '400px',
-height: '70px', backgroundColor:'white'}} ></textarea>
-<Button style={{ marginTop:'10px',display:'block',textAlign:'center',margin:'auto',marginTop:'20px' }} >
+            <Input type={'text'} />
+            <Label>Bericht</Label>
+            <Textarea></Textarea>
+<Button>
+    <PhoneIcon/>
     VERZENDEN
 </Button>
-           </form>
-                </Div2>
-            
+          </RightContent>
+                </RightSide>
+            </Sec>
             
         </Section>
     )

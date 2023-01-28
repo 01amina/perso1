@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Image from "next/image";
 
 const Section = styled.section`
   display: flex;
@@ -10,7 +9,10 @@ const Section = styled.section`
 
 `;
 const Item = styled.div`
-
+  display: flex;
+    flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.6),
@@ -23,12 +25,23 @@ const Item = styled.div`
   flex: 1;
   color: white;
   background-color: #2854ad;
-  padding: 140px;
+  padding: 100px;
   min-width: 25%;
+`;
+const Title=styled.h2`
+font-size: 22px;
+font-weight: bold;
+margin-bottom: 12px;
+
+`;
 
 
+
+const Div=styled.div`
+font-size: 16px;
+text-shadow: 1px 1px 2px black;
   
-  
+
 `;
 
 export const Section4 = () => {
@@ -36,28 +49,44 @@ export const Section4 = () => {
     <Section>
 
       <Item img='/images/sec1.jpeg'>
-        <p>Elektrotechniek</p>
+        <Div>
+      <Title>Elektrotechniek</Title>
+     </Div>
       </Item>
-      <Item img='/images/sec2.jpeg' >
-      <p>Elektrotechniek</p>
-      </Item>
+      <Item img='/images/sec2.jpeg'  >
+      <Div>
+      <Title>Groepenkast</Title>
+      
+        </Div>
+         </Item>
       <Item img='/images/sec3.jpeg'>
-      <p>Elektrotechniek</p>
+        <Div>
+      <Title>Kortsluiting</Title>
+      </Div>
       </Item>
+    
       <Item img='/images/sec4.jpeg'>
-      <p>Elektrotechniek</p>
+       <Div> <Title>Elektromonteur</Title>
+      </Div>
       </Item>
       <Item img='/images/sec5.jpeg'>
-      <p>Elektrotechniek</p>
+    <Div> <Title>Elektra aanleggen</Title>
+    </Div>
       </Item>
       <Item img='/images/sec6.jpeg'>
-      <p>Elektrotechniek</p>
+     <Div> <Title>Storingsdienst</Title>
+     </Div>
       </Item>
       <Item img='/images/sec7.jpeg'>
-      <p>Elektrotechniek</p>
+     <Div> <Title>Krachtstroom
+</Title>
+    </Div>
       </Item>
       <Item img='/images/sec8.jpeg'>
-      <p>Elektrotechniek</p>
+      <Div><Title>Ander probleem?
+</Title>
+        
+</Div>
       </Item>
     </Section>
   );
