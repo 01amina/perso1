@@ -5,8 +5,7 @@ import { PHONE_NUMBER } from "@/constants";
 
 
 const Section = styled.section `
-display: grid;
-
+display: flex;
 background-color:rgb(39, 54, 71);
 flex-wrap: wrap;
 width: 100%;

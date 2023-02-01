@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 const Section=styled.section`
-min-height: 680px;
+min-height: 700px;
 background-color: #273647;
 width: 100%;
+justify-content: center;
 display: flex;
 position: relative;
-justify-content: center;
-@media (max-width:1024px) {
-    min-height: 1008px;
+@media (max-width:768px) {
+    min-height: 1268px;
 }
 
 
@@ -17,37 +17,51 @@ justify-content: center;
 const Sect1=styled.div`
 background-color: #273647;
 display: flex;
-width: 70%;
+width: 80%;
+margin-left: auto;
+margin-left: auto;
 height: auto;
+margin-top: 28vh;
 flex-wrap: wrap;
 display: flex;
 z-index: 0;
-margin-top: 31vh;
 position: absolute;
+
+
+@media (max-width:768px) {
+    min-width: 90%; 
+  
+}
 `;
 
 const T1=styled.div`
 flex: 25%;
 min-width: 300px;
+padding: 0 15px 30px;
 `;
 const T2=styled.div`
 flex: 25%;
 min-width: 300px;
+padding: 0 15px 30px;
 `;
 const T3=styled.div`
 min-width: 300px;
 flex: 25%;
+padding: 0 15px 30px;
 `;
 const Text=styled.p`
 color: #fff;
-margin-bottom: 20px;
-font-size: 25px;
-margin-top: 3vh;
+padding: 12px;
+margin-bottom: 1.5em;
+border-bottom: 2px solid rgba(255,255,255,.2);
+font-size: 1.2em;
 font-weight: bold;
 
 `;
 const Li=styled.li`
 list-style: none;
+border-bottom: 1px solid rgba(255,255,255,.2);
+margin: 0;
 ::before{
     content:  "✓";
     font-family: fl-icons;
@@ -61,73 +75,81 @@ color: #fff;
 margin-bottom: 20px;
 `;
 const S1 =styled.div`
-width: 80%;
-min-width: 150px;
-height: 190px;
+min-width: 160px;
+height: 170px;
 min-height:120px;
-padding: 10px;
 background-color: rgb(236, 178, 76);
 border-radius: 8px;
 z-index: 2;
 position: absolute;
 margin: -60px 0px 0px 0px;
-border-radius: 10px;
+padding: 0 15px 30px;
 display: flex;
 flex-wrap: wrap;
-text-align: left;
+width: 80%;
 @media (max-width:1024px) {
     min-height:249px;
 }
 
 `;
-const SS1 =styled.div`
+const LeftSide =styled.div`
 flex: 70%;
 min-width: 350px;
-padding: 12px;
+padding: 0;
 text-align: left;
-
+margin: auto;
 
 `;
-const SS2 =styled.div`
+const RightSide =styled.div`
 background-image: url(/images/foot2.png);
 background-repeat: no-repeat;
-background-size: 80%;
+margin-top: 4vh;
+background-size: 270px;
 flex: 30%;
-padding: 100px;
-min-width: 300px;
-@media (max-width:1024px) {
-    background-size: 50%;
+@media (max-width:425px) {
+    background-size: 190px;
+    margin-top: -4vh;
 }
 
 `;
-const Text4 =styled.h2`
+const Title =styled.h2`
 color: black;
-margin-bottom: 2vh;
+font-size: 1.7em;
+margin-bottom: 1.3vh;
 `;
 const Text1 =styled.p`
-font-size: 16px;
-
+font-size: 1em;
 color: black;
 @media (max-width:661px) {
     width: 230px; 
 }
 `;
-const Image =styled.img`
 
+const Ul =styled.ul`
+   line-height: 1.8;
+   font-size: 0.9em;
+
+`;
+const Table =styled.table`
+  width: 100%;
+ 
+  font-size: 0.9em;
 `;
 const Tr =styled.tr`
-
+     display: table-row;
 `;
 const Td =styled.td`
-line-height: 24px;
+ line-height: 1.3;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  margin: 0;
+  padding: 0.5em;
 
 `;
 
 const Image1 = styled.div`
 background-image: url("/images/Foot.png");
 padding: 100px;
-
-background-size: 350px;
+background-size: 300px;
 background-repeat: no-repeat;
 @media (max-width:661px) {
     background-size: 250px;
@@ -144,33 +166,31 @@ export const Footer=()=>{
     return(
 <Section>
 <S1>
-<SS1>
-    <Text4>Elektricien Koning</Text4>
+<LeftSide>
+    <Title>Elektricien Koning</Title>
     <Text1>Een elektricien nodig? Wij hebben altijd
          een professionele 
-        elektricien beschikbaar bij u in de buurt.</Text1>
-</SS1>
-<SS2>
-    <Image>
-    </Image>
-</SS2>
+         elektricien beschikbaar bij u in de buurt.</Text1>
+</LeftSide>
+<RightSide>
+</RightSide>
     </S1>
 
   
    <Sect1>
        <T1>
            <Text>ONZE DIENSTEN</Text>
-           <ul>
+           <Ul>
                <Li>Elektra aanleggen</Li>
                <Li> Meterkast uitbreiden</Li>
                <Li> Groepenkast vervangen</Li>
                <Li> Kortsluiting en storingen</Li>
                <Li>24/7 Spoeddienst</Li>
-           </ul>
+           </Ul>
        </T1>
        <T2>
            <Text>OPENINGSTIJDEN</Text>
-           <table>
+           <Table>
                <Tr>
                    <Td>Maandag</Td>
                    <Td>00:00 – 00:00</Td>
@@ -200,7 +220,7 @@ export const Footer=()=>{
                        <Td>00:00 – 00:00</Td>
                     </Tr>
                
-           </table>
+           </Table>
        </T2>
        <T3>
 <Text>IN DE BUURT</Text>

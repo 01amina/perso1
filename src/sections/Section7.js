@@ -22,7 +22,7 @@ width: 80%;
 padding: 20px;
 height: 369px;
 min-width: 300px;
-margin-top: 10vh;
+margin: auto;
 background-color: white;
 border-color: #bf1e2e;
 @media (max-width : 793px){

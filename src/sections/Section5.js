@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import styles from '@/styles/Home.module.css'
 import { Button as button } from "@/Components/Button";
 import { PhoneIcon } from "@/icons/phone-fill";
 
@@ -75,10 +74,10 @@ export const Section5 = ()=>{
     <Title>
     Elektricien Koning 24/7 Nooddienst
     </Title>
-   
    <Button>
       <PhoneIcon/>bel ons
-      </Button></RContent>
+      </Button>
+      </RContent>
   </RightContent>
 </Content>
     </Section>

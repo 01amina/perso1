@@ -75,12 +75,14 @@ const Item= styled.div`
 const Q= styled.p`
 font-weight: bold;
 color: black;
+font-size: 1.2em;
 margin-bottom: 0.5em;
 margin-left: 12px;
 `;
 const A= styled.p`
 color: black;
 margin-left: 12px;
+font-size: 1em;
 `;
 
 

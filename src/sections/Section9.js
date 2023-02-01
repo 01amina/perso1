@@ -16,7 +16,7 @@ display: grid;
 place-items: center;
 `;
 const Sec = styled.div`
-width: 70%;
+width: 80%;
 max-height: 600px;
 margin: auto;
 display: flex;
