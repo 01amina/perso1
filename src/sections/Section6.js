@@ -10,25 +10,28 @@ background-color: white;
 display: flex;
 justify-content: center;
 flex-wrap: wrap;
+@media (max-width:768px) {
+flex-direction: column;
+}
 `;
 const LeftSide=styled.div`
 flex: 2;
 background-color: white;
-min-width: 200px;
+min-width: 150px;
 min-height: 300px;
-padding: 12px;
+padding: 20px;
 @media (min-width:1440px) {
-font-size: 2vh;
+font-size: 2.2vh;
 }
 `;
 
 const RightSide=styled.div`
 flex: 1;
-min-width: 300px;
+min-width: 150px;
 min-height: 300px;
 background-color: rgb(39, 54, 71);
 text-align: center;
-padding: 10px;
+padding: 20px;
 `;
 
 

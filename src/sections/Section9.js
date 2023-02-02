@@ -9,24 +9,25 @@ import { Instagram } from "@/icons/Instagram";
 
 const Section=styled.section`
 width: 100%;
-min-height: 990px;
+padding: 20px 0 100px;
 background-color: rgb(25, 36, 48);
-display: grid;
+display: flex;
 place-items: center;
 @media (min-width:2560px) {
     min-height: 1889px;   
+}
+@media (max-width:768px) {
+    padding: 0 0 100px;
   
 }
 `;
 const Sec = styled.div`
-width: 80%;
-max-height: 600px;
+max-width: 1034px;
 margin: auto;
 display: flex;
 flex-wrap: wrap;
 @media (max-width : 425px){
- width: 94%;
- min-height: 690px;
+ width: 100%;
 }
 @media (min-width:2560px) {
     min-height: 889px;

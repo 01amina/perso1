@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { PhoneIcon } from "@/icons/phone-fill";
-import { Button } from "@/Components/Button";
+import { Button as button } from "@/Components/Button";
 import { PHONE_NUMBER } from "@/constants";
 
 
@@ -12,7 +12,7 @@ width: 100%;
 min-height: 500px;
 position: relative;
 `;
-const Title=styled.h1`
+const Title=styled.h2`
 font-size: 30px;
 @media (max-width : 661px){
     font-size: 23px;
@@ -46,10 +46,6 @@ background-size: cover;
 z-index: 1;
 position: relative;
 filter: blur(6px);
-
-
-
-
 `;
 
 const Content =styled.div`
@@ -61,13 +57,25 @@ z-index: 2;
 margin: 10% 2vh ;
 position: absolute;
 background-color: rgb(39, 54, 71);
-@media (max-width : 375px){
-  margin: 9vh 2vh ;
+@media (max-width : 768px){
+ min-height: 100%;
+ margin: 0;
+ display: flex;
+ flex-direction: column;
+  align-items: left;
+  padding: 20px;
+  justify-content: center;
 }
 @media (min-width:2560px) {
   margin: 5vh 5vh ;
 }
 
+`;
+const Button =styled(button)`
+@media (max-width : 768px){
+max-width: 320px;
+font-size: 19px;
+}
 `;
 
  
@@ -77,9 +85,10 @@ export const Section3 = ()=>{
     <Section>
         <Image></Image>
 
-   <Content><Title> Met spoed een elektricien nodig? </Title>
- <Text>Bij Elektricien Koning hebben wij altijd een elektricien beschikbaar bij u in de buurt. Wij zijn namelijk actief in heel Nederland. U kunt bij ons terecht voor allerlei elektra werkzaamheden zoals het oplossen van storingen, aanleggen van elektra of het vervangen van de meterkast </Text>
- <Button> 
+   <Content>
+     <Title> Met spoed een elektricien nodig? </Title>
+ <Text>Bij Elektricien Koning hebben wij altijd een elektricien beschikbaar bij u in de buurt. Wij zijn namelijk actief in heel Nederland. U kunt bij ons terecht voor allerlei elektra werkzaamheden zoals het oplossen van storingen, aanleggen van elektra of het vervangen van de meterkast. </Text>
+ <Button>
    <PhoneIcon/>
    {PHONE_NUMBER}
   </Button>

@@ -23,6 +23,14 @@ background-size: cover;
 min-width: 250px;
 flex: 50%;
 min-height: 300px;
+@media (max-width : 768px){
+ position: relative;
+ min-width: 100%;
+ position: relative;
+ z-index: 1;
+ min-height: 373px;
+ filter: blur(3px);
+}
 `;
 
 const Content = styled.div `
@@ -33,13 +41,25 @@ flex-wrap: wrap;
 text-align: center;
 `;
 const RightContent = styled.div `
-display: grid;
+display: flex;
 place-items: center;
+justify-content: center;
 flex: 50%;
-min-width: 150px;
-min-height: 200px;
 background-color: rgb(236, 178, 76);
+@media (max-width : 768px){
+ position: absolute;
+ z-index: 2;
+ margin: 10% 20% ;
+padding: 12px;
 
+}
+@media (max-width :425px){
+ min-height: 374px;
+ min-width: 100%;
+ margin: 0;
+padding: 20px;
+justify-content: center;
+ }
 `;
 const RContent=styled.div`
 
@@ -60,9 +80,9 @@ flex: 50%;
 `;
 const Button =styled(button)`
 
-margin-top: 8vh;
+margin-top: 4vh;
 @media (max-width : 661px){
-    margin-top: 0vh;
+    margin-top: 3vh;
 }
 @media (min-width:2560px) {
     font-size: 2vh;

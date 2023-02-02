@@ -5,7 +5,7 @@ import { PHONE_NUMBER } from "@/constants";
 
 const Section= styled.section`
 width: 100%;
-height: 600px;
+min-height: 600px;
 display: flex;
 position: relative;
 justify-content: center;
@@ -21,17 +21,12 @@ background-size: cover;
 const Div = styled.div`
 width: 80%;
 padding: 20px;
-height: 369px;
+
 min-width: 300px;
 margin: auto;
 background-color: white;
 border-color: #bf1e2e;
-@media (max-width : 793px){
-    height: 400px;
-}
-@media (min-width:2560px) {
-    height: 569px;
-}
+
 
 `;
 const H1 = styled.h2`
@@ -44,7 +39,7 @@ font-weight: bold;
     font-size: 26px;
 }
 @media (max-width : 375px){
-    font-size: 18px;
+    font-size: 20px;
 }
 
 
@@ -64,13 +59,10 @@ font-size: 1.5vh;
 
 `;
 const Button =styled(button)`
-font-size: 2.5vh;
+font-size: 1.2em;
 margin-top: 5vh;
 
-@media (min-width:1440px) {
-    font-size: 1.7vh;
- margin-top: 1vh;
-}
+
 `;
 
 

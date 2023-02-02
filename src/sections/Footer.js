@@ -1,50 +1,29 @@
 import styled from "styled-components";
 
-const Section=styled.section`
-min-height: 700px;
+const Section=styled.footer`
+min-height: 300px;
 background-color: #273647;
 width: 100%;
+flex-direction: column;
 justify-content: center;
 display: flex;
-position: relative;
-@media (max-width:768px) {
-    min-height: 1268px;
-}
-@media (min-width:1024px) {
-    min-height: 898px;
-    
-  
-}
-
-
-
 `;
 const Sect1=styled.div`
 background-color: #273647;
 display: flex;
 width: 80%;
-margin-left: auto;
-margin-left: auto;
+margin: auto;
 height: auto;
-margin-top: 28vh;
 flex-wrap: wrap;
 display: flex;
-z-index: 0;
-position: absolute;
-
+margin-top: 0;
 
 @media (max-width:768px) {
-    min-width: 90%; 
-    margin-top: 32vh;
-  
-}
-@media (min-width:1024px) {
-    margin-top: 23vh;
-    
+    min-width: 100%; 
+
   
 }
 @media (min-width:2560px) {
-    margin-top: 13vh;
     font-size: 1.4vh;
     
   
@@ -92,24 +71,25 @@ color: #fff;
 margin-bottom: 20px;
 `;
 const S1 =styled.div`
-min-width: 150px;
-height: 170px;
-min-height:120px;
+max-width: 1034px;
+min-height:250px;
+margin-left: auto;
+margin-right: auto;
 background-color: rgb(236, 178, 76);
 border-radius: 8px;
-z-index: 2;
-position: absolute;
-margin: -60px 0px 0px 0px;
-padding: 0 15px 30px;
+transform: translateY(-60px);
+padding: 15px;
 display: flex;
 flex-wrap: wrap;
 width: 80%;
 @media (max-width:1024px) {
-    min-height:238px;
     min-width: 98%;
 }
+@media (max-width:320px) {
+    padding: 0;
+}
 @media (min-width:2560px) {
-    min-height: 250px;
+
     font-size: 1.6vh;
     
   
@@ -145,9 +125,7 @@ margin-bottom: 1.3vh;
 const Text1 =styled.p`
 font-size: 1em;
 color: black;
-@media (max-width:661px) {
-    width: 230px; 
-}
+
 `;
 
 const Ul =styled.ul`
