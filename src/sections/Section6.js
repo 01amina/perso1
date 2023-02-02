@@ -1,4 +1,4 @@
-import { Button  } from "@/Components/Button";
+import { Button as button  } from "@/Components/Button";
 import styled from "styled-components";
 import { PhoneIcon } from "@/icons/phone-fill";
 import { PHONE_NUMBER } from "@/constants";
@@ -17,6 +17,9 @@ background-color: white;
 min-width: 200px;
 min-height: 300px;
 padding: 12px;
+@media (min-width:1440px) {
+font-size: 2vh;
+}
 `;
 
 const RightSide=styled.div`
@@ -26,7 +29,6 @@ min-height: 300px;
 background-color: rgb(39, 54, 71);
 text-align: center;
 padding: 10px;
-
 `;
 
 
@@ -37,6 +39,9 @@ font-size: 30px;
 @media (max-width : 768px){
     font-size: 22px;
 }
+@media (min-width:2560px) {
+font-size: 2.3vh;
+}
 `;
 const Subtitle= styled.h3`
 color: wheat;
@@ -44,6 +49,9 @@ margin-bottom: 3vh;
 font-size: 18px;
 @media (max-width : 768px){
     font-size: 16px;
+}
+@media (min-width:2560px) {
+font-size: 1.8vh;
 }
 `;
 const Ul=styled.ul`
@@ -58,6 +66,10 @@ line-height: 30px;
 @media (max-width : 768px){
     font-size: 15px;
 }
+@media (min-width:2560px) {
+font-size: 1.8vh;
+line-height: 66px;
+}
 `;
 const Li= styled.li`
 margin-left: 1em;
@@ -66,7 +78,9 @@ margin-left: 1em;
     font-family: fl-icons;
     font-size: 20px;
     color: rgb(122, 156, 89);
-  
+    @media (min-width:2560px) {
+font-size: 1.8vh;
+}
 }
 
 `;
@@ -84,7 +98,13 @@ color: black;
 margin-left: 12px;
 font-size: 1em;
 `;
+const Button =styled(button)`
 
+@media (min-width:1440px) {
+    font-size: 1.9vh;
+ margin-top: 4vh;
+}
+`;
 
 
 const list=[

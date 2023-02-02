@@ -1,91 +1,92 @@
+import { useState } from "react";
 import styled from "styled-components"
 
 
  const Section=styled.section`
  padding: 30px;
+ height: ${(props)=> (props.extendNavbar ? "100vh": "80px")};
  background-color: white;
  display: flex;
  align-items: center;
- flex-flow: wrap;
- width: 100%;
  justify-content: center;
 
  `;
-  const Li = styled.label`
+  const Li = styled.li`
   color: black;
-  display: inline;
-  margin-right: 20px;
   font-size: .8em;
-  color: #555555;
-  font-family: "Lato", sans-serif;
-  font-weight: 500;
-  `;
- const Bttn= styled.button`
- padding: 13px;
- background-image: url(/images/Search.png);
- border: none;
- background-size: 17px;
- background-repeat: no-repeat;
- background-position: center;
- background-color: #ed1c24;
- padding-bottom: 9px;
- padding-top: 19px;
- `;
- const Input1=styled.input`
-    border: 1px solid #ddd;
-    padding: 14px;
-    height: 1.3em;
-    width: 130px;
+margin: 5px;
+  list-style: none;
+display: inline-block;
+  `
+    const LiExtended = styled.li`
+    color: black;
+    font-size: .8em;
+    list-style: none;
   
-    font-size: 15px;
-    background-color: #fff;
-    color: #333;
-    
-  
-    box-shadow: inset 0 1px 2px rgb(0 0 0 / 10%);
- `;
+    `;
+
 const Logo=styled.div`
 
-min-width:33.333% ;
+min-width:33.3% ;
+`;
+const Ul=styled.ul`
+@media (max-width: 700px){
+  display: none;
+}
+
 `;
 const Div2=styled.div`
-
-min-width:200px ;
+display: flex;
+min-width:33.3% ;
 `;
-const Div3=styled.div`
-position: relative;
-min-width:33.333% ;
+const ExNavbar=styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+@media (min-width:700px){
+  display: none;
+}
 `;
-const SearchBar=styled.div`
-  float: right;
-  min-width:100px;
-  @media (max-width : 425px){
-margin-top: 2vh;
 
+const Button=styled.button`
+width: 70px;
+height: 50px;
+background: none;
+color: black;
+font-size: 45px;
+cursor: pointer;
+@media (min-width: 700px){
+  display: none;
+}
 
-  }
 `;
+
 
 export const Navbar=()=>{
-
+const [extendNavbar,setExtendNavbar]=useState(false);
      return(
-<Section>
+<Section extendNavbar={extendNavbar}>
     <Logo>
     </Logo>
     <Div2>
-      <ul>
+      <Ul>
     <Li><a href="">HOMEPAGINA</a></Li>
   <Li><a href="">DIENSTEN</a></Li>
   <Li><a href="">CONTACT</a></Li>
-</ul>
+</Ul>
 </Div2>
-    <Div3>
-      <SearchBar>
-      <Input1 placeholder="Zoeken" ></Input1>
-  <Bttn></Bttn></SearchBar>
-  </Div3>
-
-
+<Button onClick={()=>{
+setExtendNavbar((curr)=>!curr)
+}}> &#8801;</Button>
+{ extendNavbar &&(
+<ExNavbar>
+<ul>
+    <LiExtended><a href="">HOMEPAGINA</a></LiExtended>
+  <LiExtended><a href="">DIENSTEN</a></LiExtended>
+  <LiExtended><a href="">CONTACT</a></LiExtended>
+</ul>
+</ExNavbar>
+)}
 
 
 

@@ -7,6 +7,9 @@ const Section = styled.section`
   justify-content: center;
   padding: 40px 20px;
   background-color: white;
+  @media (min-width:2560px) {
+ font-size: 1.1vh;
+}
 `;
 
 const ItemElement = styled.div`

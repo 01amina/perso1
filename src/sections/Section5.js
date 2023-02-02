@@ -7,9 +7,11 @@ const Section = styled.section `
 width: 100%;
 min-height: 370px;
 display: flex;
-
 flex-wrap: wrap;
 
+@media (min-width:2560px) {
+    min-height: 570px;
+}
 
 `;
 
@@ -37,6 +39,7 @@ flex: 50%;
 min-width: 150px;
 min-height: 200px;
 background-color: rgb(236, 178, 76);
+
 `;
 const RContent=styled.div`
 
@@ -51,12 +54,19 @@ flex: 50%;
     font-size: 24px;
     margin-top: 9vh;
 }
+@media (min-width:2560px) {
+    font-size: 2.5vh;
+}
 `;
 const Button =styled(button)`
 
 margin-top: 8vh;
 @media (max-width : 661px){
     margin-top: 0vh;
+}
+@media (min-width:2560px) {
+    font-size: 2vh;
+    margin-top: 0;
 }
 `;
 

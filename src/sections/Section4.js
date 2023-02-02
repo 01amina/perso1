@@ -28,12 +28,20 @@ place-content: center;
   @media (max-width:425px){
     min-width: 90%;
   }
- 
+  @media (max-width:768px){
+    font-size:1.9vh ;
+  }
+  @media (min-width:2560px) {
+    font-size: 1.4vh;
+}
 `;
 const Title=styled.h2`
 font-size: 22px;
 font-weight: bold;
 margin-bottom: 12px;
+@media (min-width:2560px) {
+    font-size: 1.8vh;
+}
 `;
 const Div=styled.div`
 font-size: 0.8em;

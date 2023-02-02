@@ -16,6 +16,7 @@ background-image: linear-gradient(
     ),url(/images/back1.jpeg);
 background-repeat: no-repeat;
 background-size: cover;
+
 `;
 const Div = styled.div`
 width: 80%;
@@ -28,6 +29,10 @@ border-color: #bf1e2e;
 @media (max-width : 793px){
     height: 400px;
 }
+@media (min-width:2560px) {
+    height: 569px;
+}
+
 `;
 const H1 = styled.h2`
 
@@ -49,7 +54,9 @@ font-size: 20px;
 margin-top: 2vh;
 color: grey;
 line-height: normal;
-
+@media (min-width:2560px) {
+font-size: 1.5vh;
+}
 
 @media (max-width : 700px){
     font-size: 14px;
@@ -59,6 +66,11 @@ line-height: normal;
 const Button =styled(button)`
 font-size: 2.5vh;
 margin-top: 5vh;
+
+@media (min-width:1440px) {
+    font-size: 1.7vh;
+ margin-top: 1vh;
+}
 `;
 
 

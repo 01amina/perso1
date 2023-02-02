@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Button as button } from "@/Components/Button";
-import Image from "next/image";
 import { PhoneIcon } from "@/icons/phone-fill";
 import { Facebook} from "@/icons/Facebook";
 import { Twitter } from "@/icons/Twitter";
@@ -14,6 +13,10 @@ min-height: 990px;
 background-color: rgb(25, 36, 48);
 display: grid;
 place-items: center;
+@media (min-width:2560px) {
+    min-height: 1889px;   
+  
+}
 `;
 const Sec = styled.div`
 width: 80%;
@@ -25,6 +28,10 @@ flex-wrap: wrap;
  width: 94%;
  min-height: 690px;
 }
+@media (min-width:2560px) {
+    min-height: 889px;
+}
+
 `;
 const LeftSide = styled.div`
 background-color: rgb(236, 178, 76);
@@ -41,6 +48,7 @@ padding: 9px;
 }
 
 
+
 `;
 const RightSide = styled.div`
 background-color: white;
@@ -55,16 +63,27 @@ min-width: 250px;
 min-height: 200px;
 padding: 9px;
 }
+@media (min-width:2560px) {
+   font-size : 1.9vh;
+  
+  
+}
 
 `;
 const Title= styled.h2`
 font-size: 30px;
-margin-bottom: 5vh;
+margin-bottom: 4vh;
+margin-top: 2vh;
 color: black;
 text-align: center;
 font-weight: bold;
 @media (max-width : 549px){
     font-size: 1.5em;
+}
+@media (min-width:2560px) {
+   font-size : 1.9vh;
+  
+  
 }
 
 `;
@@ -77,6 +96,12 @@ text-align: center;
 @media (max-width : 320px){
     font-size: 14px;
 }
+@media (min-width:2560px) {
+   font-size : 1.5vh;
+   line-height:normal;
+  
+}
+
 
 `;
 const Social= styled.div`
@@ -85,16 +110,18 @@ text-align: center;
 `;
 const Input = styled.input`
 background-color: white;
-border-color: initial;
 border-width: 2px;
-border: 1px solid #ddd;
-box-shadow: inset 0 1px 2px rgb(0 0 0 / 10%);
+border: 1px solid black;
 display: block;
 margin-bottom: 3vh;
 min-width: 220px;
 height: 30px;
 @media (max-width : 320px){
     margin-bottom: 1vh;
+}
+@media (min-width:2560px) {
+  min-width: 400px;
+  height: 50px;
 }
 `;
 const Label = styled.label`
@@ -115,7 +142,12 @@ background-color: white;
 min-width: 220px;
 height: 49px;
 display: block;
+border: 1px solid black;
 margin: auto;
+@media (min-width:2560px) {
+  min-width: 400px;
+  height: 50px;
+}
 `;
 const RightContent = styled.div`
 

@@ -17,6 +17,10 @@ font-size: 30px;
 @media (max-width : 661px){
     font-size: 23px;
 }
+@media (min-width:2560px) {
+  font-size: 2.2vh;
+
+}
 
 `;
 const Text =styled.p`
@@ -26,6 +30,10 @@ margin:  2vh auto;
 line-height: 29px;
 @media (max-width : 661px){
     font-size: 17px;
+}
+@media (min-width:2560px) {
+  font-size: 1.7vh;
+  line-height: normal;
 }
 
 `;
@@ -55,6 +63,9 @@ position: absolute;
 background-color: rgb(39, 54, 71);
 @media (max-width : 375px){
   margin: 9vh 2vh ;
+}
+@media (min-width:2560px) {
+  margin: 5vh 5vh ;
 }
 
 `;
