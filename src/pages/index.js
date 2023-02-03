@@ -8,7 +8,6 @@ import { Section7 } from "@/sections/Section7";
 import { Section8 } from "@/sections/Section8";
 import { Section6 } from "@/sections/Section6";
 import { Section9 } from "@/sections/Section9";
-import { Sect4 } from "@/sections/Sec4'";
 import { Navbar } from "@/sections/Navbar";
 import { Footer } from "@/sections/Footer";
 import { Foot2 } from "@/sections/Foot2";
@@ -22,20 +21,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Navbar/>
+        <Navbar />
         <HeroSection />
         <Section2 />
-        <Section3/>
-       <Sect4/>
-        <Section4/>
-        <Section5/>
-         <Section6/>
-        <Section7/>
-        <Section8/>
-        <Section9/>
-        <Footer/>
-        <Foot2/>
-       
+        <Section3 />
+        <Section4 />
+        <Section5 />
+        <Section6 />
+        <Section7 />
+        <Section8 />
+        <Section9 />
+        <Footer />
+        <Foot2 />
       </main>
     </>
   );

@@ -2,90 +2,130 @@ import styled from "styled-components";
 
 const Section = styled.section`
   display: flex;
+  flex-direction: column;
   background-color: white;
+  padding-top: 40px;
+`;
+
+const Items = styled.div`
+  display: flex;
   flex-wrap: wrap;
 `;
+
+const Text = styled.div`
+  color: black;
+  font-size: 28px;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+`;
+
 const Item = styled.div`
-  display: flex;
- justify-content: center;
-text-align: left;
-place-content: center;
+  width: 100%;
+  position: relative;
+  color: white;
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
-    ),url(${({ img }) => {
-    return img;
-  }});
+    ),
+    url(${({ img }) => {
+      return img;
+    }});
   background-repeat: no-repeat;
   background-size: cover;
-  flex: 1;
-  color: white;
-  background-color: #2854ad;
-  padding: 150px;
-  min-width: 25%;
 
-  @media (min-width:2560px) {
-    font-size: 1.4vh;
-}
-`;
-const Title=styled.h2`
-font-size: 2em;
-text-align: center;
-font-weight: bold;
-@media (min-width:2560px) {
-    font-size: 1.8vh;
-}
-`;
-const Div=styled.div`
-font-size: 0.8em;
-min-width: 300px;
+  :before {
+    content: "";
+    display: block;
+    padding-top: 50%;
+  }
+
+  @media (min-width: 480px) {
+    width: 50%;
+
+    :before {
+      padding-top: 100%;
+    }
+  }
+
+  @media (min-width: 860px) {
+    width: 25%;
+  }
 `;
 
+const ItemContent = styled.div`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Title = styled.h2`
+  font-size: 1.4em;
+  text-align: center;
+  font-weight: bold;
+
+  @media (min-width: 1024px) {
+    font-size: 2em;
+  }
+
+  @media (min-width: 2560px) {
+    font-size: 4em;
+  }
+`;
 
 export const Section4 = () => {
   return (
     <Section>
-
-      <Item img='/images/sec1.jpeg'>
-       
-        <Div>
-      <Title>Elektrotechniek</Title>
-     </Div>
-      </Item>
-      <Item img='/images/sec2.jpeg'  >
-      <Div>
-      <Title>Groepenkast</Title>
-        </Div>
-         </Item>
-      <Item img='/images/sec3.jpeg'>
-        <Div>
-      <Title>Kortsluiting</Title>
-      </Div>
-      </Item>
-    
-      <Item img='/images/sec4.jpeg'>
-       <Div> <Title>Elektromonteur</Title>
-      </Div>
-      </Item>
-      <Item img='/images/sec5.jpeg'>
-    <Div> <Title>Elektra aanleggen</Title>
-    </Div>
-      </Item>
-      <Item img='/images/sec6.jpeg'>
-     <Div> <Title>Storingsdienst</Title>
-     </Div>
-      </Item>
-      <Item img='/images/sec7.jpeg'>
-     <Div> <Title>Krachtstroom
-</Title>
-    </Div>
-      </Item>
-      <Item img='/images/sec8.jpeg'>
-      <Div><Title>Ander probleem?
-</Title>
-</Div>
-      </Item>
+      <Text>Onze diensten</Text>
+      <Items>
+        <Item img="/images/sec1.jpeg">
+          <ItemContent>
+            <Title>Elektrotechniek</Title>
+          </ItemContent>
+        </Item>
+        <Item img="/images/sec2.jpeg">
+          <ItemContent>
+            <Title>Groepenkast</Title>
+          </ItemContent>
+        </Item>
+        <Item img="/images/sec3.jpeg">
+          <ItemContent>
+            <Title>Kortsluiting</Title>
+          </ItemContent>
+        </Item>
+        <Item img="/images/sec4.jpeg">
+          <ItemContent>
+            <Title>Elektromonteur</Title>
+          </ItemContent>
+        </Item>
+        <Item img="/images/sec5.jpeg">
+          <ItemContent>
+            <Title>Elektra aanleggen</Title>
+          </ItemContent>
+        </Item>
+        <Item img="/images/sec6.jpeg">
+          <ItemContent>
+            <Title>Storingsdienst</Title>
+          </ItemContent>
+        </Item>
+        <Item img="/images/sec7.jpeg">
+          <ItemContent>
+            <Title>Krachtstroom</Title>
+          </ItemContent>
+        </Item>
+        <Item img="/images/sec8.jpeg">
+          <ItemContent>
+            <Title>Ander probleem?</Title>
+          </ItemContent>
+        </Item>
+      </Items>
     </Section>
   );
 };
