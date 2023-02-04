@@ -3,20 +3,18 @@ import { Button as button } from "@/Components/Button";
 import { PhoneIcon } from "@/icons/phone-fill";
 
 const Section = styled.section`
-  width: 100%;
-  min-height: 370px;
-  display: flex;
-  flex-wrap: wrap;
+  display: none;
 
-  @media (min-width: 2560px) {
+  @media (min-width: 1024px) {
+    width: 100%;
     min-height: 570px;
+    display: flex;
+    flex-wrap: wrap;
   }
 `;
 
 const Image = styled.img`
-  background-image: url(/images/Sback1.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  object-fit: cover;
   min-width: 250px;
   flex: 50%;
   min-height: 300px;
@@ -75,32 +73,28 @@ const RContent = styled.div`
 
 const Title = styled.h1`
   min-width: 200px;
-  line-height: 6vh;
+  line-height: 1.4;
   font-size: 30px;
   flex: 50%;
+
   @media (max-width: 661px) {
     font-size: 24px;
   }
+
   @media (min-width: 2560px) {
-    font-size: 2.5vh;
+    font-size: 38px;
   }
 `;
+
 const Button = styled(button)`
-  margin-top: 4vh;
-  @media (max-width: 661px) {
-  }
-  @media (min-width: 2560px) {
-    font-size: 2vh;
-    margin-top: 0;
-  }
+  margin-top: 20px;
 `;
 
 export const Section5 = () => {
   return (
     <Section>
       <Content>
-        <Image></Image>
-
+        <Image src="/images/Sback1.jpeg" alt="" />
         <RightContent>
           <RContent>
             <Title>Elektricien Koning 24/7 Nooddienst</Title>

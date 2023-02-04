@@ -9,10 +9,12 @@ const Section = styled.section`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  @media (max-width: 768px) {
+
+  @media (max-width: 1024px) {
     flex-direction: column;
   }
 `;
+
 const LeftSide = styled.div`
   flex: 2;
   background-color: white;
@@ -26,6 +28,10 @@ const LeftSide = styled.div`
 
 const RightSide = styled.div`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   min-width: 150px;
   min-height: 300px;
   background-color: rgb(39, 54, 71);
@@ -84,7 +90,10 @@ const Li = styled.li`
     }
   }
 `;
-const Item = styled.div``;
+const Item = styled.div`
+  margin-bottom: 24px;
+`;
+
 const Q = styled.p`
   font-weight: bold;
   color: black;
@@ -97,16 +106,8 @@ const A = styled.p`
   margin-left: 12px;
   font-size: 1em;
 `;
-const Button = styled(button)`
-  @media (min-width: 1440px) {
-    font-size: 2.9vh;
-    margin-top: 2vh;
-  }
-  @media (max-width: 1440px) {
-    font-size: 3.2vh;
-    margin-top: 2vh;
-  }
-`;
+
+const Button = styled(button)``;
 
 const list = [
   {

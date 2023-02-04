@@ -1,53 +1,59 @@
-import { Button as button } from "@/Components/Button";
-import { PHONE_NUMBER } from "@/constants";
 import styled from "styled-components";
+import { PHONE_NUMBER } from "@/constants";
+import { PhoneIcon } from "@/icons/phone-fill";
 
 const Section = styled.nav`
-  padding: 10px;
   max-height: 90px;
-  background-color: whitesmoke;
   display: flex;
   align-items: center;
-  justify-content: center; ;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: whitesmoke;
 `;
-const Logo = styled.img`
-  background-image: url(/images/Logo.jpeg);
-  background-size: contain;
-  padding: 39px;
-  background-repeat: no-repeat;
-`;
-const LogoText = styled.div`
-  font-weight: bolder;
-  font-size: 43px;
-  color: #2854ad;
-  font-family: fantasy;
-`;
-const Leftside = styled.div`
+
+const LogoContainer = styled.div`
   display: flex;
-  margin: auto;
   justify-content: center;
-  flex: 1;
 `;
-const Button = styled(button)`
-  flex: 2;
-  max-width: 300px;
-  margin-right: 9vh;
-  @media (max-width: 425px) {
-    max-width: 150px;
-    margin-right: 0;
-    font-size: 12px;
-    padding: 9px;
+
+const Logo = styled.img`
+  width: 24px;
+  object-fit: contain;
+`;
+
+const LogoText = styled.p`
+  font-family: fantasy;
+  font-size: 24px;
+  color: #2854ad;
+  font-weight: bold;
+  margin-left: 8px;
+`;
+
+const Button = styled.a`
+  font-size: 16px;
+  color: white;
+  border-radius: 4px;
+  padding: 8px 10px;
+  background-color: #2854ad;
+
+  svg {
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
   }
 `;
 
 export const Navbar = () => {
   return (
     <Section>
-      <Leftside>
-        <Logo></Logo>
+      <LogoContainer>
+        <Logo src="/images/Logo.jpeg" alt="logo" />
         <LogoText>SOS</LogoText>
-      </Leftside>
-      <Button>{PHONE_NUMBER}</Button>
+      </LogoContainer>
+      <Button href={`tel:${PHONE_NUMBER}`}>
+        <PhoneIcon />
+        {PHONE_NUMBER}
+      </Button>
     </Section>
   );
 };

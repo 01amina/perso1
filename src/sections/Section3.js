@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Button as button } from "@/Components/Button";
 import { PhoneIcon } from "@/icons/phone-fill";
+import { PHONE_NUMBER } from "@/constants";
 
 const Section = styled.section`
   width: 100%;
@@ -14,9 +15,7 @@ const Section = styled.section`
 `;
 
 const Image = styled.img`
-  background-image: url(/images/her2.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  object-fit: cover;
   min-width: 250px;
   flex: 50%;
   min-height: 300px;
@@ -46,17 +45,18 @@ const Content = styled.div`
   }
 `;
 const RightContent = styled.div`
-  display: flex;
-  place-items: center;
-  justify-content: center;
   flex: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: rgb(39, 54, 71);
+
   @media (max-width: 768px) {
     z-index: 2;
     padding: 12px;
-    margin-left: 52px;
-    margin-right: 52px;
+    margin: 50px;
   }
+
   @media (max-width: 425px) {
     min-height: 374px;
     min-width: 100%;
@@ -65,24 +65,17 @@ const RightContent = styled.div`
     justify-content: center;
   }
 `;
+
 const RContent = styled.div`
-  text-align: center;
-  padding: 10px;
   max-width: 520px;
-`;
-const Text = styled.p`
-  line-height: normal;
-  font-size: 20px;
-  @media (max-width: 425px) {
-    font-size: 16px;
-  }
+  text-align: center;
+  padding: 20px;
 `;
 
 const Title = styled.h1`
-  min-width: 200px;
   margin-bottom: 2vh;
-  line-height: 6vh;
   font-size: 32px;
+  line-height: 1.4;
   font-weight: bolder;
   flex: 50%;
 
@@ -90,23 +83,23 @@ const Title = styled.h1`
     font-size: 2.5vh;
   }
 `;
+
+const Text = styled.p`
+  max-width: 90%;
+  font-size: 16px;
+  line-height: 1.3;
+  margin-top: 20px;
+`;
+
 const Button = styled(button)`
-  margin-top: 4vh;
-  @media (max-width: 661px) {
-    margin-top: 3vh;
-  }
-  @media (min-width: 2560px) {
-    font-size: 2vh;
-    margin-top: 0;
-  }
+  margin-top: 20px;
 `;
 
 export const Section3 = () => {
   return (
     <Section>
       <Content>
-        <Image></Image>
-
+        <Image src="/images/her2.jpeg" alt="fixing electicity wires" />
         <RightContent>
           <RContent>
             <Title> Met spoed een elektricien nodig? </Title>
@@ -119,7 +112,7 @@ export const Section3 = () => {
             </Text>
             <Button>
               <PhoneIcon />
-              bel ons
+              {PHONE_NUMBER}
             </Button>
           </RContent>
         </RightContent>
