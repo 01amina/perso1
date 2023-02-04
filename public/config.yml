@@ -9,7 +9,7 @@ public_folder: "/images" # the folder our images should be fetched from
 collections: # our content types, this is just an example!
   - name: "hero"
     label: "Hero Section"
-    file: "_content/hero.md"
+    folder: "_sections/hero"
     create: true
     slug: "hero"
     fields:
@@ -17,7 +17,7 @@ collections: # our content types, this is just an example!
       - { label: "Subtitle", name: "subtitle", widget: "text" }
   - name: "section_2"
     label: "Section 2"
-    file: "_content/section_2.md"
+    folder: "_sections/section_2"
     create: true
     slug: "section_2"
     fields:
@@ -29,7 +29,7 @@ collections: # our content types, this is just an example!
           - { label: Description, name: desc, widget: text }
   - name: "section_3"
     label: "Section 3"
-    file: "_content/section_3.md"
+    folder: "_sections/section_3"
     create: true
     slug: "section_3"
     fields:
