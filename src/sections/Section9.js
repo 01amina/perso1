@@ -8,68 +8,73 @@ import { Instagram } from "@/icons/Instagram";
 
 const Section = styled.section`
   width: 100%;
-  padding: 20px 0 100px;
+  padding: 0 0 100px;
   background-color: rgb(25, 36, 48);
   display: flex;
-  place-items: center;
+
+  @media (min-width: 860px) {
+    padding-top: 20px;
+  }
+
   @media (min-width: 2560px) {
     min-height: 1889px;
   }
-  @media (max-width: 768px) {
-    padding: 0 0 100px;
-  }
 `;
+
 const Sec = styled.div`
-  max-width: 1034px;
-  margin: auto;
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  @media (max-width: 425px) {
-    width: 100%;
+  flex-direction: column;
+
+  @media (min-width: 860px) {
+    flex-direction: row;
   }
+
   @media (min-width: 2560px) {
     min-height: 889px;
   }
 `;
+
 const LeftSide = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: rgb(236, 178, 76);
-  min-width: 250px;
-  min-height: 550px;
-  flex: 30%;
-  padding: 10px;
-  display: grid;
-  place-items: center;
+  padding: 40px 20px;
+
   @media (max-width: 425px) {
-    min-width: 250px;
     min-height: 200px;
-    padding: 9px;
   }
 `;
+
 const RightSide = styled.div`
-  background-color: white;
-  min-width: 250px;
-  padding: 10px;
-  text-align: center;
+  flex: 1;
+  display: flex;
+  align-items: center;
   min-height: 550px;
-  display: grid;
-  place-items: center;
-  flex: 50%;
+  text-align: center;
+  padding: 10px;
+  background-color: white;
+
   @media (max-width: 425px) {
     min-width: 250px;
     min-height: 200px;
     padding: 9px;
   }
+
   @media (min-width: 2560px) {
     font-size: 1.9vh;
   }
 `;
+
 const Title = styled.h2`
   font-size: 30px;
   margin-bottom: 4vh;
-  margin-top: 2vh;
   color: black;
   text-align: center;
   font-weight: bold;
+
   @media (max-width: 549px) {
     font-size: 1.5em;
   }
@@ -77,6 +82,7 @@ const Title = styled.h2`
     font-size: 1.9vh;
   }
 `;
+
 const Text = styled.p`
   font-size: 17px;
   line-height: 22px;
@@ -94,6 +100,7 @@ const Text = styled.p`
 const Social = styled.div`
   text-align: center;
 `;
+
 const Input = styled.input`
   background-color: white;
   border-width: 2px;
@@ -101,6 +108,7 @@ const Input = styled.input`
   margin-bottom: 3vh;
   min-height: 30px;
   width: 100%;
+
   @media (max-width: 320px) {
     margin-bottom: 1vh;
   }
@@ -124,6 +132,7 @@ const Label = styled.label`
 const Textarea = styled.textarea`
   background-color: white;
   min-width: 220px;
+  width: 100%;
   display: block;
   border: 1px solid black;
   margin: auto;
@@ -132,8 +141,17 @@ const Textarea = styled.textarea`
     height: 50px;
   }
 `;
-const RightContent = styled.div``;
-const LeftContent = styled.div``;
+const RightContent = styled.div`
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+`;
+
+const LeftContent = styled.div`
+  max-width: 480px;
+  margin: 0 auto;
+`;
+
 const Media1 = styled.div`
   display: inline-block;
   margin-left: 1.5vh;
@@ -164,15 +182,12 @@ export const Section9 = () => {
             </Text>
             <Social>
               <Media1>
-                {" "}
-                <Facebook />{" "}
+                <Facebook />
               </Media1>
               <Media1>
-                {" "}
                 <Instagram />
               </Media1>
               <Media1>
-                {" "}
                 <Twitter />
               </Media1>
               <Media1>
@@ -181,22 +196,25 @@ export const Section9 = () => {
             </Social>
           </LeftContent>
         </LeftSide>
-
         <RightSide>
           <RightContent>
-            <Title>contact</Title>
-
-            <Label>E-mailadres</Label>
-
-            <Input type={"text"} />
-            <Label>Telefoonnummer</Label>
-
-            <Input type={"text"} />
-            <Label>Onderwerp</Label>
-            <br></br>
-            <Input type={"text"} />
-            <Label>Bericht</Label>
-            <Textarea cols={30} rows={5}></Textarea>
+            <Title>Contact</Title>
+            <div>
+              <Label>E-mailadres</Label>
+              <Input type={"text"} />
+            </div>
+            <div>
+              <Label>Telefoonnummer</Label>
+              <Input type={"text"} />
+            </div>
+            <div>
+              <Label>Onderwerp</Label>
+              <Input type={"text"} />
+            </div>
+            <div>
+              <Label>Bericht</Label>
+              <Textarea cols={30} rows={5}></Textarea>
+            </div>
             <Button>
               <PhoneIcon />
               VERZENDEN
