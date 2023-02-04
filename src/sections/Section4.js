@@ -67,13 +67,9 @@ const ItemContent = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 1.4em;
+  font-size: 140%;
   text-align: center;
   font-weight: bold;
-
-  @media (min-width: 1024px) {
-    font-size: 2em;
-  }
 
   @media (min-width: 2560px) {
     font-size: 4em;
