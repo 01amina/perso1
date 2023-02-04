@@ -56,15 +56,15 @@ collections: # our content types, this is just an example!
         widget: object
         summary: "{{fields.right_side.title}}"
         fields:
-          - label: FAQ,
-            name: faq,
-            widget: list,
+          - label: FAQ
+            name: faq
+            widget: list
             fields:
               - { name: question, label: Question, widget: text }
               - { name: answer, label: Answer, widget: text }
-          - label: Right Side,
-            name: right_side,
-            widget: object,
+          - label: Right Side
+            name: right_side
+            widget: object
             fields:
               - { name: title, label: Title, widget: string }
               - { name: subtitle, label: Subtitle, widget: string }
