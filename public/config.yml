@@ -73,8 +73,8 @@ collections: # our content types, this is just an example!
               - { name: subtitle, label: Subtitle, widget: string }
               - name: bullets
                 label: Bullets
-                widget: list,
-                max: 4,
+                widget: list
+                max: 4
                 fields:
                   - name: Item
                     label: Bullet
