@@ -53,7 +53,11 @@ section_6:
   right_side:
     title: Direct een elektricien nodig?
     subtitle: Wij helpen u met alle elektra werkzaamheden
-    bullets: []
+    bullets:
+      - Item: 95% Direct opgelost
+      - Item: Dag en nacht bereikbaar
+      - Item: eterkast vervangen
+      - Item: toringdienst
 section_7:
   title: Elektricien Koning staat altijd voor u klaar!
   text: >-
