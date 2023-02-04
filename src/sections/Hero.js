@@ -20,18 +20,15 @@ const Section = styled.section`
   background-size: cover;
   font-size: 16px;
   background-position: center;
- @media (min-width:760px){
-
-  font-size: 20px;
- }
- 
+  @media (min-width: 760px) {
+    font-size: 20px;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 2.3em;
   color: white;
   margin-bottom: 29px;
-
 `;
 
 const SubTitle = styled.p`
@@ -39,10 +36,7 @@ const SubTitle = styled.p`
   line-height: 1.2;
   letter-spacing: 1px;
   margin-bottom: 29px;
-
-
 `;
-
 
 export const HeroSection = () => {
   return (

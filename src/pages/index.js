@@ -10,7 +10,6 @@ import { Section6 } from "@/sections/Section6";
 import { Section9 } from "@/sections/Section9";
 import { Navbar } from "@/sections/Navbar";
 import { Footer } from "@/sections/Footer";
-import { Foot2 } from "@/sections/Foot2";
 
 export default function Home() {
   return (
@@ -32,7 +31,6 @@ export default function Home() {
         <Section8 />
         <Section9 />
         <Footer />
-        <Foot2 />
       </main>
     </>
   );
