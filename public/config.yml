@@ -23,7 +23,7 @@ collections: # our content types, this is just an example!
     fields:
       - label: Features
         name: features
-        widget: object
+        widget: list
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Description, name: desc, widget: text }
