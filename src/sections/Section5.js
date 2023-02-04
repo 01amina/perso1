@@ -98,7 +98,7 @@ export const Section5 = () => {
         <RightContent>
           <RContent>
             <Title>Elektricien Koning 24/7 Nooddienst</Title>
-            <Button>
+            <Button href={`tel:${PHONE_NUMBER}`}>
               <PhoneIcon />
               bel ons
             </Button>

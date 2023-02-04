@@ -88,7 +88,7 @@ export const Section7 = () => {
             gevallen is er direct een elektricien beschikbaar om u te helpen
           </Text>
         </Text>
-        <Button>
+        <Button href={`tel:${PHONE_NUMBER}`}>
           <PhoneIcon />
           {PHONE_NUMBER}
         </Button>

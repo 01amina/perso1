@@ -215,7 +215,7 @@ export const Section9 = () => {
               <Label>Bericht</Label>
               <Textarea cols={30} rows={5}></Textarea>
             </div>
-            <Button>
+            <Button href={`tel:${PHONE_NUMBER}`}>
               <PhoneIcon />
               VERZENDEN
             </Button>

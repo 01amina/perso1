@@ -43,7 +43,7 @@ export const HeroSection = () => {
     <Section>
       <Title> Elektricien Koning</Title>
       <SubTitle>ELEKTRICIEN NODIG? SCHAKEL ONS DIRECT IN.</SubTitle>
-      <Button>
+      <Button href={`tel:${PHONE_NUMBER}`}>
         <PhoneIcon />
         {PHONE_NUMBER}
       </Button>

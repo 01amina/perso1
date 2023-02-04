@@ -175,7 +175,7 @@ export const Section6 = () => {
           <Li>eterkast vervangen,</Li>
           <Li>toringdienst</Li>
         </Ul>
-        <Button>
+        <Button href={`tel:${PHONE_NUMBER}`}>
           <PhoneIcon />
           {PHONE_NUMBER}
         </Button>

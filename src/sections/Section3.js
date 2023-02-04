@@ -110,7 +110,7 @@ export const Section3 = () => {
               werkzaamheden zoals het oplossen van storingen, aanleggen van
               elektra of het vervangen van de meterkast.{" "}
             </Text>
-            <Button>
+            <Button href={`tel:${PHONE_NUMBER}`}>
               <PhoneIcon />
               {PHONE_NUMBER}
             </Button>
