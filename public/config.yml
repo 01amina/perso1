@@ -7,13 +7,36 @@ backend:
 media_folder: "public/images" # the folder we want to upload new images to
 public_folder: "/images" # the folder our images should be fetched from
 collections: # our content types, this is just an example!
-  - name: "pages"
-    label: "Pages"
-    folder: "_posts/pages"
+  - name: "hero"
+    label: "Hero Section"
+    file: "_content/hero.md"
     create: true
-    slug: "{{title}}"
+    slug: "hero"
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Subtitle", name: "subtitle", widget: "text" }
+  - name: "section_2"
+    label: "Section 2"
+    file: "_content/section_2.md"
+    create: true
+    slug: "section_2"
+    fields:
+      - label: Features
+        name: features
+        widget: object
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Description, name: desc, widget: text }
+  - name: "section_3"
+    label: "Section 3"
+    file: "_content/section_3.md"
+    create: true
+    slug: "section_3"
+    fields:
+      - label: Features
+        name: features
+        widget: object
+        fields:
+          - { label: Image, name: image, widget: image }
+          - { label: Title, name: title, widget: string }
+          - { label: Description, name: desc, widget: text }
