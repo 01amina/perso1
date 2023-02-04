@@ -157,7 +157,6 @@ export const Footer = () => {
         </LeftSide>
         <RightSide></RightSide>
       </S1>
-
       <Sect1>
         <T1>
           <Text>ONZE DIENSTEN</Text>
