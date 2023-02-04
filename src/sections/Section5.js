@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Button as button } from "@/Components/Button";
 import { PhoneIcon } from "@/icons/phone-fill";
+import { PHONE_NUMBER } from "@/constants";
 
 const Section = styled.section`
   display: none;

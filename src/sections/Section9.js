@@ -5,6 +5,7 @@ import { Facebook } from "@/icons/Facebook";
 import { Twitter } from "@/icons/Twitter";
 import { Email } from "@/icons/Email";
 import { Instagram } from "@/icons/Instagram";
+import { PHONE_NUMBER } from "@/constants";
 
 const Section = styled.section`
   width: 100%;
