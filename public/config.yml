@@ -25,6 +25,7 @@ collections: # our content types, this is just an example!
         name: section_2
         summary: "{{fields.title}}"
         widget: list
+        label_singular: "Add Item"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Description, name: desc, widget: text }
@@ -40,13 +41,14 @@ collections: # our content types, this is just an example!
         name: "section_4"
         summary: "Features"
         widget: list
+        label_singular: "Add feature"
         fields:
           - { label: Image, name: image, widget: image }
           - { label: Title, name: title, widget: string }
       - label: "Section 5"
         name: "section_5"
         summary: "{{fields.title}}"
-        widget: list
+        widget: object
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
@@ -68,17 +70,18 @@ collections: # our content types, this is just an example!
             fields:
               - { name: title, label: Title, widget: string }
               - { name: subtitle, label: Subtitle, widget: string }
-              - { name: bullets, label: Bullets, widget: list }
+              - { name: bullets, label: Bullets, widget: list, max: 4 }
       - label: "Section 7"
         name: "section_7"
         summary: "{{fields.title}}"
-        widget: list
+        widget: object
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Text, name: text, widget: markdown }
       - label: "Reviews"
         name: "reviews"
         widget: list
+        max: 3
         fields:
           - { label: Name, name: name, widget: string }
           - { label: Review, name: review, widget: text }
