@@ -1,10 +1,7 @@
 import styled from "styled-components";
 
-
-
 export const Button = styled.button`
-
-font-size: 18px;
+  font-size: 16px;
   border: none;
   border-radius: 0.8em;
   padding: 0.8em 1.1em;
@@ -16,9 +13,8 @@ font-size: 18px;
     margin-right: 5px;
     transform: translateY(5px);
   }
-  @media (min-width:760px){
 
-    font-size: 22px;
+  @media (min-width: 760px) {
+    font-size: 18px;
   }
-
 `;
