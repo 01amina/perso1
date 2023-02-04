@@ -175,11 +175,11 @@ export const Section9 = () => {
               Indien u een vraag heeft over één van onze diensten, dan kunt u
               het contactformulier invullen. Wij nemen dan zo snel mogelijk
               contact met u op
-              <Text>
-                Let op: indien uw aanvraag een spoedopdracht betreft, raden wij
-                aan om telefonisch contact met ons op te nemen. Wij zijn 24/7
-                bereikbaar.
-              </Text>
+            </Text>
+            <Text>
+              Let op: indien uw aanvraag een spoedopdracht betreft, raden wij
+              aan om telefonisch contact met ons op te nemen. Wij zijn 24/7
+              bereikbaar.
             </Text>
             <Social>
               <Media1>

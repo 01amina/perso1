@@ -16,34 +16,36 @@ collections: # our content types, this is just an example!
       - label: Hero
         name: hero
         widget: object
+        summary: "{{fields.title}}"
         fields:
           - { label: Image, name: image, widget: image }
           - { label: Title, name: title, widget: string }
           - { label: Description, name: desc, widget: text }
       - label: "Section 2"
         name: section_2
+        summary: "{{fields.title}}"
+        widget: list
         fields:
-          - label: Features
-            name: features
-            widget: list
-            fields:
-              - { label: Title, name: title, widget: string }
-              - { label: Description, name: desc, widget: text }
-      - label: "Section 3"
-        name: "section_3"
-        widget: object
-        fields:
-          - { label: Image, name: image, widget: image }
           - { label: Title, name: title, widget: string }
           - { label: Description, name: desc, widget: text }
+      - label: "Section 3"
+        name: "section_3"
+        summary: "{{fields.title}}"
+        widget: object
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Description, name: desc, widget: text }
+          - { label: Image, name: image, widget: image }
       - label: "Section 4"
         name: "section_4"
+        summary: "Features"
         widget: list
         fields:
           - { label: Image, name: image, widget: image }
           - { label: Title, name: title, widget: string }
       - label: "Section 5"
         name: "section_5"
+        summary: "{{fields.title}}"
         widget: list
         fields:
           - { label: Title, name: title, widget: string }
@@ -52,6 +54,7 @@ collections: # our content types, this is just an example!
       - label: "Section 6"
         name: "section_6"
         widget: object
+        summary: "{{fields.right_side.title}}"
         fields:
           - label: FAQ,
             name: faq,
@@ -65,3 +68,24 @@ collections: # our content types, this is just an example!
             fields:
               - { name: title, label: Title, widget: string }
               - { name: subtitle, label: Subtitle, widget: string }
+              - { name: bullets, label: Bullets, widget: list }
+      - label: "Section 7"
+        name: "section_7"
+        summary: "{{fields.title}}"
+        widget: list
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Text, name: text, widget: markdown }
+      - label: "Reviews"
+        name: "reviews"
+        widget: list
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Review, name: review, widget: text }
+          - { label: Platform, name: platform, widget: string }
+      - label: "Section 9"
+        name: "section_9"
+        widget: object
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Description, name: description, widget: text }
