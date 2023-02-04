@@ -7,36 +7,61 @@ backend:
 media_folder: "public/images" # the folder we want to upload new images to
 public_folder: "/images" # the folder our images should be fetched from
 collections: # our content types, this is just an example!
-  - name: "hero"
-    label: "Hero Section"
-    folder: "_sections/hero"
+  - name: "electrician"
+    label: "Electrician"
+    folder: "_sections/electrician"
     create: true
-    slug: "hero"
+    slug: "electrician"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Subtitle", name: "subtitle", widget: "text" }
-  - name: "section_2"
-    label: "Section 2"
-    folder: "_sections/section_2"
-    create: true
-    slug: "section_2"
-    fields:
-      - label: Features
-        name: features
-        widget: list
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Description, name: desc, widget: text }
-  - name: "section_3"
-    label: "Section 3"
-    folder: "_sections/section_3"
-    create: true
-    slug: "section_3"
-    fields:
-      - label: Features
-        name: features
+      - label: Hero
+        name: hero
         widget: object
         fields:
           - { label: Image, name: image, widget: image }
           - { label: Title, name: title, widget: string }
           - { label: Description, name: desc, widget: text }
+      - label: "Section 2"
+        name: section_2
+        fields:
+          - label: Features
+            name: features
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: desc, widget: text }
+      - label: "Section 3"
+        name: "section_3"
+        widget: object
+        fields:
+          - { label: Image, name: image, widget: image }
+          - { label: Title, name: title, widget: string }
+          - { label: Description, name: desc, widget: text }
+      - label: "Section 4"
+        name: "section_4"
+        widget: list
+        fields:
+          - { label: Image, name: image, widget: image }
+          - { label: Title, name: title, widget: string }
+      - label: "Section 5"
+        name: "section_5"
+        widget: list
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Image, name: image, widget: image }
+          - { label: Button Text, name: button_text, widget: string }
+      - label: "Section 6"
+        name: "section_6"
+        widget: object
+        fields:
+          - label: FAQ,
+            name: faq,
+            widget: list,
+            fields:
+              - { name: question, label: Question, widget: text }
+              - { name: answer, label: Answer, widget: text }
+          - label: Right Side,
+            name: right_side,
+            widget: object,
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: subtitle, label: Subtitle, widget: string }
