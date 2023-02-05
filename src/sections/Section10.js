@@ -144,7 +144,7 @@ const Image1 = styled.div`
   }
 `;
 
-export const Footer = () => {
+export const Section10 = () => {
   return (
     <Section>
       <S1>
@@ -162,9 +162,9 @@ export const Footer = () => {
           <Text>ONZE DIENSTEN</Text>
           <Ul>
             <Li>Elektra aanleggen</Li>
-            <Li> Meterkast uitbreiden</Li>
-            <Li> Groepenkast vervangen</Li>
-            <Li> Kortsluiting en storingen</Li>
+            <Li>Meterkast uitbreiden</Li>
+            <Li>Groepenkast vervangen</Li>
+            <Li>Kortsluiting en storingen</Li>
             <Li>24/7 Spoeddienst</Li>
           </Ul>
         </T1>
