@@ -121,7 +121,10 @@ section_10:
       beschikbaar bij u in de buurt.
   our_services:
     title: ONZE DIENSTEN
-    services_list:
-      - Elektra aanleggen  Meterkast uitbreiden  Groepenkast
-        vervangen  Kortsluiting en storingen 24/7 Spoeddienst
+    services_list: |-
+      * Elektra aanleggen
+      * Meterkast uitbreiden
+      * Groepenkast vervangen
+      * Kortsluiting en storingen
+      * 24/7 Spoeddienst
 ---
