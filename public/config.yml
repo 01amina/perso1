@@ -40,9 +40,9 @@ collections: # our content types, this is just an example!
           - { label: Image, name: image, widget: image }
       - label: "Section 4"
         name: "section_4"
-        summary: "Features"
         widget: list
         label_singular: "feature"
+        summary: "{{fields.title}}"
         fields:
           - { label: Image, name: image, widget: image }
           - { label: Title, name: title, widget: string }
@@ -93,6 +93,7 @@ collections: # our content types, this is just an example!
         max: 3
         fields:
           - { label: Name, name: name, widget: string }
+          - { label: image, name: image, widget: image }
           - { label: Review, name: review, widget: text }
           - { label: Platform, name: platform, widget: string }
       - label: "Section 9"
@@ -101,3 +102,24 @@ collections: # our content types, this is just an example!
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Description, name: description, widget: markdown }
+      - label: Section 10
+        name: section_10
+        widget: object
+        fields:
+          - name: banner
+            label: Banner
+            widget: obejct
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Text, name: text, widget: text }
+          - name: our_services
+            label: Our Services
+            widget: obejct
+            fields:
+              - { label: Title, name: title, widget: string }
+              - {
+                  label: Services list,
+                  name: services_list,
+                  widget: list,
+                  label_singular: "service",
+                }
