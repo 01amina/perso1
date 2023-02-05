@@ -92,17 +92,20 @@ reviews:
       is erg communicatief en reageert snel op emailtjes. Aanrader!
     name: Marieke de jong
     platform: Facebook
+    image: /images/cl3.jpeg
   - review: Ik had problemen met mijn meterkast. Ik heb een afspraak gemaakt met
       Elektricien Koning en de storing kon direct verholpen worden. Gelukkig
       viel de prijs ook nog mee!
     name: jack p
     platform: Google+
+    image: /images/cl1.png
   - review: Zeer tevreden over de elektricien en zijn werkzaamheden. Herstelt ook
       nog de foute aansluitingen van eerder ingeschakelde installateurs! Heeft
       tevens een nieuwe oven en inductie kookplaat geïnstalleerd! Dik in orde en
       ik schakel hem graag weer in voor een komende klus!
     name: Rob zwart
     platform: Facebook
+    image: /images/cl5.png
 section_9:
   title: Elektricien Koning
   description: >-
@@ -111,4 +114,14 @@ section_9:
 
 
     Let op: indien uw aanvraag een spoedopdracht betreft, raden wij aan om telefonisch contact met ons op te nemen. Wij zijn 24/7 bereikbaar.
+section_10:
+  banner:
+    title: Elektricien Koning
+    text: Een elektricien nodig? Wij hebben altijd een professionele elektricien
+      beschikbaar bij u in de buurt.
+  our_services:
+    title: ONZE DIENSTEN
+    services_list:
+      - Elektra aanleggen  Meterkast uitbreiden  Groepenkast
+        vervangen  Kortsluiting en storingen 24/7 Spoeddienst
 ---
