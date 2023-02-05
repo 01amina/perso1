@@ -120,14 +120,6 @@ collections: # our content types, this is just an example!
               - {
                   label: Services list,
                   name: services_list,
-                  widget: list,
+                  widget: markdown,
                   label_singular: "service",
-                  default:
-                    [
-                      "Elektra aanleggen",
-                      "Meterkast uitbreiden",
-                      "Groepenkast vervangen",
-                      "Kortsluiting en storingen",
-                      "24/7 Spoeddienst",
-                    ],
                 }
