@@ -38,11 +38,11 @@ const SubTitle = styled.p`
   margin-bottom: 29px;
 `;
 
-export const HeroSection = () => {
+export const HeroSection = ({ data }) => {
   return (
     <Section>
-      <Title> Elektricien Koning</Title>
-      <SubTitle>ELEKTRICIEN NODIG? SCHAKEL ONS DIRECT IN.</SubTitle>
+      <Title>{data?.title}</Title>
+      <SubTitle>{data?.desc}</SubTitle>
       <Button href={`tel:${PHONE_NUMBER}`}>
         <PhoneIcon />
         {PHONE_NUMBER}

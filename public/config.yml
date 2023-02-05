@@ -9,7 +9,8 @@ public_folder: "/images" # the folder our images should be fetched from
 collections: # our content types, this is just an example!
   - name: "electrician"
     label: "Electrician"
-    folder: "_sections/electrician"
+    summary: "Electrician"
+    folder: "_sections"
     create: true
     slug: "electrician"
     fields:

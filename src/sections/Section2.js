@@ -1,4 +1,3 @@
-import { TruckOutline } from "@/icons/truck-outline";
 import styled from "styled-components";
 
 const Section = styled.section`
@@ -57,40 +56,21 @@ const Item = ({ title, desc, iconName }) => {
   );
 };
 
-export const Section2 = () => {
+const icons = ["bi-truck", "bi-clock-history", "bi-trophy"];
+
+export const Section2 = ({ data }) => {
   return (
     <Section>
-      <Item
-        title={<>Binnen 45 min. bij u</>}
-        desc={
-          <>
-            Heeft u een erkende elektricien nodig voor een spoedgeval? Onze
-            elektriciens zijn snel ter plaatse. In de meeste gevallen binnen 45
-            minuten bij u.
-          </>
-        }
-        iconName="bi-truck"
-      />
-      <Item
-        title={<>24/7 bereikbaar</>}
-        desc={
-          <>
-            Dé elektricien in uw regio. 24 uur per dag en 7 dagen per week. Snel
-            hulp in uw regio bij al uw elektra problemen en vragen
-          </>
-        }
-        iconName="bi-clock-history"
-      />
-      <Item
-        title={<>Betaalbare reparaties</>}
-        desc={
-          <>
-            Onze elektriciens zijn specialisten in het uitvoeren van alle
-            elektra werkzaamheden voor een betaalbare prijs.
-          </>
-        }
-        iconName="bi-trophy"
-      />
+      {data?.map((item, i) => {
+        return (
+          <Item
+            key={i}
+            title={item.title}
+            desc={item.desc}
+            iconName={icons[i]}
+          />
+        );
+      })}
     </Section>
   );
 };
