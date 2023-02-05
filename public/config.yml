@@ -108,13 +108,13 @@ collections: # our content types, this is just an example!
         fields:
           - name: banner
             label: Banner
-            widget: obejct
+            widget: object
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Text, name: text, widget: text }
           - name: our_services
             label: Our Services
-            widget: obejct
+            widget: object
             fields:
               - { label: Title, name: title, widget: string }
               - {
