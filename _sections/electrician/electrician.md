@@ -24,6 +24,20 @@ section_3:
 section_4:
   - title: Elektrotechniek
     image: /images/sec1.jpeg
+  - title: Groepenkast
+    image: /images/sec2.jpeg
+  - title: Kortsluiting
+    image: /images/sec3.jpeg
+  - title: Elektromonteur
+    image: /images/sec4.jpeg
+  - title: Elektra aanleggen
+    image: /images/sec5.jpeg
+  - title: Storingsdienst
+    image: /images/sec6.jpeg
+  - title: Krachtstroom
+    image: /images/sec7.jpeg
+  - title: Ander probleem?
+    image: /images/sec8.jpeg
 section_5:
   title: Electrician King 24/7 Emergency Service
   image: /images/Sback1.jpeg
@@ -71,6 +85,24 @@ section_7:
 
 
     Dus, heeft u last van een storing, wilt u elektra laten aanleggen of renoveren? Aarzel dan niet en neem contact met ons op. In de meeste gevallen is er direct een elektricien beschikbaar om u te helpen
+reviews:
+  - review: Oscar van Elektricien Koning heeft bij ons een nieuwe moderne
+      groepenkast geïnstalleerd. Hij kwam op de afgesproken tijd. Heeft het
+      netjes gemonteerd. Ik ben er erg blij mee. Oscar is een echte vakman. Hij
+      is erg communicatief en reageert snel op emailtjes. Aanrader!
+    name: Marieke de jong
+    platform: Facebook
+  - review: Ik had problemen met mijn meterkast. Ik heb een afspraak gemaakt met
+      Elektricien Koning en de storing kon direct verholpen worden. Gelukkig
+      viel de prijs ook nog mee!
+    name: jack p
+    platform: Google+
+  - review: Zeer tevreden over de elektricien en zijn werkzaamheden. Herstelt ook
+      nog de foute aansluitingen van eerder ingeschakelde installateurs! Heeft
+      tevens een nieuwe oven en inductie kookplaat geïnstalleerd! Dik in orde en
+      ik schakel hem graag weer in voor een komende klus!
+    name: Rob zwart
+    platform: Facebook
 section_9:
   title: Elektricien Koning
   description: >-
