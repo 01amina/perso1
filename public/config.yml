@@ -122,5 +122,13 @@ collections: # our content types, this is just an example!
                   name: services_list,
                   widget: list,
                   label_singular: "service",
+                  default:
+                    [
+                      "Elektra aanleggen",
+                      "Meterkast uitbreiden",
+                      "Groepenkast vervangen",
+                      "Kortsluiting en storingen",
+                      "24/7 Spoeddienst",
+                    ],
                   fields: { name: service, label: Service, widget: string },
                 }
