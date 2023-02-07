@@ -143,31 +143,37 @@ const Image1 = styled.div`
     background-size: 250px;
   }
 `;
-
-export const Section10 = () => {
+const Item = ({ title,list }) => {
+  return (
+    
+  <T1>
+    <Text>{title}</Text>
+  <Ul>
+    <Li>{list}</Li>
+  </Ul>
+  </T1>
+  );
+};
+export const Section10 = ({ data }) => {
   return (
     <Section>
       <S1>
         <LeftSide>
-          <Title>Elektricien Koning</Title>
-          <Text1>
-            Een elektricien nodig? Wij hebben altijd een professionele
-            elektricien beschikbaar bij u in de buurt.
-          </Text1>
+          <Title>{data?.title}</Title>
+          <Text1>{data?.text}</Text1>
         </LeftSide>
         <RightSide></RightSide>
       </S1>
       <Sect1>
-        <T1>
-          <Text>ONZE DIENSTEN</Text>
-          <Ul>
-            <Li>Elektra aanleggen</Li>
-            <Li>Meterkast uitbreiden</Li>
-            <Li>Groepenkast vervangen</Li>
-            <Li>Kortsluiting en storingen</Li>
-            <Li>24/7 Spoeddienst</Li>
-          </Ul>
-        </T1>
+      { data?.map((item, i) => {
+        return (
+          <Item
+          key={i}
+          title={item.title}
+          list={item.services_list}
+          />
+        );
+      })}
         <T2>
           <Text>OPENINGSTIJDEN</Text>
           <Table>
