@@ -109,46 +109,7 @@ const A = styled.p`
 
 const Button = styled(button)``;
 
-const list = [
-  {
-    q: "Elektricien nodig? Elektricien in de Buurt staat voor u klaar!",
-    a: (
-      <>
-        Of het nu gaat om het oplossen van een storing of het vervangen van de
-        meterkast, wij doen het allemaal! Ook aanleggen van elektra is iets waar
-        wij bij kunnen helpen. Krachtstroom aanleggen of een inductieplaat
-        aansluiten, wij doen het dagelijks
-      </>
-    ),
-  },
-  {
-    q: "Elektricien Koning met spoed",
-    a: (
-      <>
-        Storingen of andere problemen met de elektra zijn ontzettend vervelend.
-        Helemaal als dit gebeurt op een vervelende tijd. Toch wilt u natuurlijk
-        snel van de problemen af zijn. Dus ook als u zoekt naar een elektricien
-        met spoed, kunt u ons bellen. Wij streven er altijd naar om zo snel
-        mogelijk bij u thuis te zijn. Ook in de avond of nacht is dit mogelijk.
-        Onze storingsdienst is namelijk 24/7 actief. Aarzel dus niet en neem
-        contact op als u hulp nodig heeft met uw elektra. Onze collega’s staan
-        klaar voor al uw vragen
-      </>
-    ),
-  },
-  {
-    q: "De kosten voor het inschakelen van een elektricien ",
-    a: (
-      <>
-        Benieuwd naar de kosten? Dat snappen wij als geen ander. U kunt een
-        offerte aanvragen of telefonisch contact opnemen. Wanneer u uitlegt waar
-        u hulp bij nodig heeft, zal een van onze collega’s meer informatie geven
-        over de kosten. Wij doen alles in samenspraak. Uiteraard zijn wij van
-        Elektricien Koning dan ook eerlijk en transparant over de tarieven.
-      </>
-    ),
-  },
-];
+const list=[]
 const FAQ = ({ q, a }) => {
   return (
     <Item>
@@ -157,24 +118,34 @@ const FAQ = ({ q, a }) => {
     </Item>
   );
 };
+const List = ({li }) => {
+  return (
+    <Ul>
+      <Li>{li}</Li>
+    </Ul>
 
-export const Section6 = () => {
+  );
+};
+export const Section6 = ({data}) => {
   return (
     <Section>
       <LeftSide>
-        {list.map((item, i) => {
-          return <FAQ key={i} q={item.q} a={item.a} />;
-        })}
+        {data?.faq.map((item, i) => {
+          return <FAQ
+           key={i}
+           q={item.question} 
+           a={item.answer} />
+        })};
       </LeftSide>
       <RightSide>
-        <Title>Direct een elektricien nodig?</Title>
-        <Subtitle>Wij helpen u met alle elektra werkzaamheden </Subtitle>
-        <Ul>
-          <Li> 95% Direct opgelost,</Li>
-          <Li>Dag en nacht bereikbaar,</Li>
-          <Li>eterkast vervangen,</Li>
-          <Li>toringdienst</Li>
-        </Ul>
+        <Title>{data?.title}</Title>
+        <Subtitle>{data?.subtitle}</Subtitle>
+        {data?.right_side.map((item, i) => {
+          return <List
+           key={i}
+           li={item.Item} 
+          />
+        })};
         <Button href={`tel:${PHONE_NUMBER}`}>
           <PhoneIcon />
           {PHONE_NUMBER}
