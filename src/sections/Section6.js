@@ -138,9 +138,9 @@ export const Section6 = ({data}) => {
         })};
       </LeftSide>
       <RightSide>
-        <Title>{data?.title}</Title>
-        <Subtitle>{data?.subtitle}</Subtitle>
-        {data?.right_side.map((item, i) => {
+        <Title>{data?.right_side.title}</Title>
+        <Subtitle>{data?.right_side.subtitle}</Subtitle>
+        {data?.right_side.bullets.map((item, i) => {
           return <List
            key={i}
            li={item.Item} 

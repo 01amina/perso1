@@ -65,27 +65,13 @@ const Button = styled(button)`
   margin-top: 5vh;
 `;
 
-export const Section7 = () => {
+export const Section7 = ({ data }) => {
   return (
     <Section>
       <Div>
-        <H1>Elektricien Koning staat altijd voor u klaar!</H1>
+        <H1>{data?.title}</H1>
         <Text>
-          Bent u opzoek naar een professionele elektricien met veel ervaring?
-          Dan bent u bij Elektricien Koning aan het juiste adres. Wij zijn
-          namelijk door heel Nederland actief waardoor wij altijd een
-          elektricien beschikbaar hebben bij u in de regio.
-        </Text>
-        <Text>
-          Wij kunnen allerlei verschillende soorten elektra werkzaamheden
-          verrichten. Van het aanleggen van elektra tot het verhelpen van
-          storingen, voor ons is het geen enkel probleem. Wij doen dit dagelijks
-          en hierdoor kunnen wij 95% van de storingen direct oplossen
-        </Text>
-        <Text>
-          Dus, heeft u last van een storing, wilt u elektra laten aanleggen of
-          renoveren? Aarzel dan niet en neem contact met ons op. In de meeste
-          gevallen is er direct een elektricien beschikbaar om u te helpen
+        {data?.text}
         </Text>
         <Button href={`tel:${PHONE_NUMBER}`}>
           <PhoneIcon />

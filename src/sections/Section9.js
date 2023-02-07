@@ -164,22 +164,15 @@ const Button = styled(button)`
   border-radius: 0;
 `;
 
-export const Section9 = () => {
+export const Section9 = ({ data }) => {
   return (
     <Section>
       <Sec>
         <LeftSide>
           <LeftContent>
-            <Title>Elektricien Koning</Title>
+            <Title>{data?.title}</Title>
             <Text>
-              Indien u een vraag heeft over één van onze diensten, dan kunt u
-              het contactformulier invullen. Wij nemen dan zo snel mogelijk
-              contact met u op
-            </Text>
-            <Text>
-              Let op: indien uw aanvraag een spoedopdracht betreft, raden wij
-              aan om telefonisch contact met ons op te nemen. Wij zijn 24/7
-              bereikbaar.
+            {data?.description}
             </Text>
             <Social>
               <Media1>

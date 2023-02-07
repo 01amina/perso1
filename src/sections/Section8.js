@@ -52,49 +52,20 @@ const Item = ({ title, desc, img, t2 }) => {
   );
 };
 
-export const Section8 = () => {
+export const Section8 = ({ data }) => {
   return (
     <Section>
-      <Item
-        title={<>Marieke de jong</>}
-        desc={
-          <>
-            Oscar van Elektricien Koning heeft bij ons een nieuwe moderne
-            groepenkast geïnstalleerd. Hij kwam op de afgesproken tijd. Heeft
-            het netjes gemonteerd. Ik ben er erg blij mee. Oscar is een echte
-            vakman. Hij is erg communicatief en reageert snel op emailtjes.
-            Aanrader!
-          </>
-        }
-        img="/images/cl1.png"
-        t2={<>Facebook</>}
-      />
-      <Item
-        title={<>jack p .</>}
-        desc={
-          <>
-            Ik had problemen met mijn meterkast. Ik heb een afspraak gemaakt met
-            Elektricien Koning en de storing kon direct verholpen worden.
-            Gelukkig viel de prijs ook nog mee!
-          </>
-        }
-        img="/images/cl5.png"
-        t2={<>Google+</>}
-      />
-      <Item
-        title={<>Rob zwart</>}
-        desc={
-          <>
-            Zeer tevreden over de elektricien en zijn werkzaamheden. Herstelt
-            ook nog de foute aansluitingen van eerder ingeschakelde
-            installateurs! Heeft tevens een nieuwe oven en inductie kookplaat
-            geïnstalleerd! Dik in orde en ik schakel hem graag weer in voor een
-            komende klus!
-          </>
-        }
-        img="/images/cl3.jpeg"
-        t2={<>Facebook</>}
-      />
+      {data?.map((item, i) => {
+        return (
+          <Item
+            key={i}
+            img={item.image}
+            title={item.name}
+            desc={item.review}
+            t2={item.platform}
+          />
+        );
+      })}
     </Section>
   );
 };

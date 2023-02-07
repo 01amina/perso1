@@ -25,11 +25,11 @@ export default function Home(props) {
         <Section3 data={data?.section_3} />
         <Section4 data={data?.section_4} />
         <Section5 data={data?.section_5} />
-        <Section6 data={data?.section_6} />
+       <Section6 data={data?.section_6} /> 
         <Section7 data={data?.section_7} />
         <Section8 data={data?.reviews} />
         <Section9 data={data?.section_9} />
-        <Section10 data={data?.section_10} />
+         <Section10 data={data?.section_10} /> 
       </main>
     </>
   );

@@ -143,15 +143,11 @@ const Image1 = styled.div`
     background-size: 250px;
   }
 `;
-const Item = ({ title,list }) => {
+const Item = ({ list }) => {
   return (
-    
-  <T1>
-    <Text>{title}</Text>
-  <Ul>
-    <Li>{list}</Li>
-  </Ul>
-  </T1>
+    <Ul>
+      <Li>{list}</Li>
+    </Ul>
   );
 };
 export const Section10 = ({ data }) => {
@@ -159,21 +155,21 @@ export const Section10 = ({ data }) => {
     <Section>
       <S1>
         <LeftSide>
-          <Title>{data?.title}</Title>
-          <Text1>{data?.text}</Text1>
+          <Title>{data?.banner.title}</Title>
+          <Text1>{data?.banner.text}</Text1>
         </LeftSide>
         <RightSide></RightSide>
       </S1>
       <Sect1>
-      { data?.map((item, i) => {
-        return (
-          <Item
-          key={i}
-          title={item.title}
-          list={item.services_list}
-          />
-        );
-      })}
+        <T1>
+          <Text>{data?.our_services.title}</Text>
+          {/*     
+    {data?.our_services.map((item, i) => {
+          return <Item
+           key={i}
+           list={item.services_list}  />
+        })}; */}
+        </T1>
         <T2>
           <Text>OPENINGSTIJDEN</Text>
           <Table>

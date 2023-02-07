@@ -91,17 +91,17 @@ const Button = styled(button)`
   margin-top: 20px;
 `;
 
-export const Section5 = () => {
+export const Section5 = ({ data }) => {
   return (
     <Section>
       <Content>
-        <Image src="/images/Sback1.jpeg" alt="" />
+        <Image src={data?.image} alt="" />
         <RightContent>
           <RContent>
-            <Title>Elektricien Koning 24/7 Nooddienst</Title>
+            <Title>{data?.title}</Title>
             <Button href={`tel:${PHONE_NUMBER}`}>
               <PhoneIcon />
-              bel ons
+              {data?.button_text}
             </Button>
           </RContent>
         </RightContent>

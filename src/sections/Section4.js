@@ -10,9 +10,10 @@ const Section = styled.section`
 const Items = styled.div`
   display: flex;
   flex-wrap: wrap;
+  background-color: antiquewhite;
 `;
 
-const Text = styled.div`
+const Text = styled.h2`
   color: black;
   font-size: 28px;
   display: block;
@@ -75,53 +76,32 @@ const Title = styled.h2`
     font-size: 4em;
   }
 `;
+const Iteem = ({ title, image }) => {
+  return (
+     <Item img={image}>
+       <ItemContent>
+         <Title>{title}</Title>
+       </ItemContent>
+     </Item>
+  );
+};
 
-export const Section4 = () => {
+export const Section4 = ({ data }) => {
   return (
     <Section>
       <Text>Onze diensten</Text>
-      <Items>
-        <Item img="/images/sec1.jpeg">
-          <ItemContent>
-            <Title>Elektrotechniek</Title>
-          </ItemContent>
-        </Item>
-        <Item img="/images/sec2.jpeg">
-          <ItemContent>
-            <Title>Groepenkast</Title>
-          </ItemContent>
-        </Item>
-        <Item img="/images/sec3.jpeg">
-          <ItemContent>
-            <Title>Kortsluiting</Title>
-          </ItemContent>
-        </Item>
-        <Item img="/images/sec4.jpeg">
-          <ItemContent>
-            <Title>Elektromonteur</Title>
-          </ItemContent>
-        </Item>
-        <Item img="/images/sec5.jpeg">
-          <ItemContent>
-            <Title>Elektra aanleggen</Title>
-          </ItemContent>
-        </Item>
-        <Item img="/images/sec6.jpeg">
-          <ItemContent>
-            <Title>Storingsdienst</Title>
-          </ItemContent>
-        </Item>
-        <Item img="/images/sec7.jpeg">
-          <ItemContent>
-            <Title>Krachtstroom</Title>
-          </ItemContent>
-        </Item>
-        <Item img="/images/sec8.jpeg">
-          <ItemContent>
-            <Title>Ander probleem?</Title>
-          </ItemContent>
-        </Item>
-      </Items>
+     <Items> {data?.map((item, i) => {
+        return (
+          
+          <Iteem
+            key={i}
+            image={item.image}
+            title={item.title}
+           
+          />
+        );
+      })}          </Items>
+
     </Section>
   );
 };

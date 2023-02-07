@@ -95,20 +95,16 @@ const Button = styled(button)`
   margin-top: 20px;
 `;
 
-export const Section3 = () => {
+export const Section3 = ({data}) => {
   return (
     <Section>
       <Content>
-        <Image src="/images/her2.jpeg" alt="fixing electicity wires" />
+        <Image src={data?.image} />
         <RightContent>
           <RContent>
-            <Title> Met spoed een elektricien nodig? </Title>
+            <Title> {data?.title} </Title>
             <Text>
-              Bij Elektricien Koning hebben wij altijd een elektricien
-              beschikbaar bij u in de buurt. Wij zijn namelijk actief in heel
-              Nederland. U kunt bij ons terecht voor allerlei elektra
-              werkzaamheden zoals het oplossen van storingen, aanleggen van
-              elektra of het vervangen van de meterkast.{" "}
+            {data?.desc}
             </Text>
             <Button href={`tel:${PHONE_NUMBER}`}>
               <PhoneIcon />
