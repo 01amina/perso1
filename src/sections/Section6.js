@@ -117,13 +117,7 @@ const FAQ = ({ q, a }) => {
     </Item>
   );
 };
-const List = ({ li }) => {
-  return (
-    <Ul>
-      <Li>{li}</Li>
-    </Ul>
-  );
-};
+
 export const Section6 = ({ data }) => {
   return (
     <Section>
@@ -135,9 +129,11 @@ export const Section6 = ({ data }) => {
       <RightSide>
         <Title>{data?.right_side.title}</Title>
         <Subtitle>{data?.right_side.subtitle}</Subtitle>
-        {data?.right_side.bullets.map((item, i) => {
-          return <List key={i} li={item.Item} />;
-        })}
+        <Ul>
+          {data?.right_side.bullets.map((item, i) => {
+            return <Li key={i}>{item}</Li>;
+          })}
+        </Ul>
         <Button href={`tel:${PHONE_NUMBER}`}>
           <PhoneIcon />
           {PHONE_NUMBER}
