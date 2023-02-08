@@ -14,7 +14,7 @@ import { Section9 } from "@/sections/Section9";
 import { Navbar } from "@/sections/Navbar";
 import { Section10 } from "@/sections/Section10";
 
-export default function Home(props) {
+const Home = (props) => {
   const data = props?.data;
 
   return (
@@ -34,7 +34,9 @@ export default function Home(props) {
       </main>
     </>
   );
-}
+};
+
+export default Home;
 
 export const getStaticProps = async () => {
   const file = fs.readFileSync(
