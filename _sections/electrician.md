@@ -1,7 +1,7 @@
 ---
 hero:
   title: SOS Elektricien
-  desc: ELEKTRICIEN NODIG? SCHAKEL ONS DIRECT IN.
+  desc: ELEKTRICIEN NODIG? SCHAKEL ONSS DIRECT IN.
   image: /images/hero.jpeg
 section_2:
   - title: Binnen 45 min. bij uuuuuuu
@@ -9,16 +9,14 @@ section_2:
       elektriciens zijn snel ter plaatse. In de meeste gevallen binnen 45
       minuten bij u.
   - title: 24/7 bereikbaar
-    desc:
-      Dé elektricien in uw regio. 24 uur per dag en 7 dagen per week. Snel hulp
+    desc: Dé elektricien in uw regio. 24 uur per dag en 7 dagen per week. Snel hulp
       in uw regio bij al uw elektra problemen en vragen
   - desc: Onze elektriciens zijn specialisten in het uitvoeren van alle elektra
       werkzaamheden voor een betaalbare prijs.
     title: Betaalbare reparaties
 section_3:
   title: Met spoed een elektricien nodig?
-  desc:
-    Bij Elektricien Koning hebben wij altijd een elektricien beschikbaar bij u
+  desc: Bij Elektricien Koning hebben wij altijd een elektricien beschikbaar bij u
     in de buurt. Wij zijn namelijk actief in heel Nederland. U kunt bij ons
     terecht voor allerlei elektra werkzaamheden zoals het oplossen van
     storingen, aanleggen van elektra of het vervangen van de meterkast.
@@ -47,14 +45,12 @@ section_5:
 section_6:
   faq:
     - question: Elektricien nodig? Elektricien in de Buurt staat voor u klaar!
-      answer:
-        Of het nu gaat om het oplossen van een storing of het vervangen van de
+      answer: Of het nu gaat om het oplossen van een storing of het vervangen van de
         meterkast, wij doen het allemaal! Ook aanleggen van elektra is iets waar
         wij bij kunnen helpen. Krachtstroom aanleggen of een inductieplaat
         aansluiten, wij doen het dagelijks
     - question: Elektricien Koning met spoed
-      answer:
-        Storingen of andere problemen met de elektra zijn ontzettend vervelend.
+      answer: Storingen of andere problemen met de elektra zijn ontzettend vervelend.
         Helemaal als dit gebeurt op een vervelende tijd. Toch wilt u natuurlijk
         snel van de problemen af zijn. Dus ook als u zoekt naar een elektricien
         met spoed, kunt u ons bellen. Wij streven er altijd naar om zo snel
@@ -62,8 +58,7 @@ section_6:
         Onze storingsdienst is namelijk 24/7 actief. Aarzel dus niet en neem
         contact op als u hulp nodig heeft met uw elektra. Onze collega’s staan
         klaar voor al uw vragen
-    - answer:
-        Benieuwd naar de kosten? Dat snappen wij als geen ander. U kunt een
+    - answer: Benieuwd naar de kosten? Dat snappen wij als geen ander. U kunt een
         offerte aanvragen of telefonisch contact opnemen. Wanneer u uitlegt waar
         u hulp bij nodig heeft, zal een van onze collega’s meer informatie geven
         over de kosten. Wij doen alles in samenspraak. Uiteraard zijn wij van
@@ -104,8 +99,7 @@ reviews:
     name: jack p
     platform: Google+
     image: /images/cl1.png
-  - review:
-      Zeer tevreden over de elektricien en zijn werkzaamheden. Herstelt ook
+  - review: Zeer tevreden over de elektricien en zijn werkzaamheden. Herstelt ook
       nog de foute aansluitingen van eerder ingeschakelde installateurs! Heeft
       tevens een nieuwe oven en inductie kookplaat geïnstalleerd! Dik in orde en
       ik schakel hem graag weer in voor een komende klus!
