@@ -70,9 +70,7 @@ export const Section7 = ({ data }) => {
     <Section>
       <Div>
         <H1>{data?.title}</H1>
-        <Text>
-        {data?.text}
-        </Text>
+        <Text dangerouslySetInnerHTML={{ __html: data?.text }}></Text>
         <Button href={`tel:${PHONE_NUMBER}`}>
           <PhoneIcon />
           {PHONE_NUMBER}

@@ -171,9 +171,9 @@ export const Section9 = ({ data }) => {
         <LeftSide>
           <LeftContent>
             <Title>{data?.title}</Title>
-            <Text>
-            {data?.description}
-            </Text>
+            <Text
+              dangerouslySetInnerHTML={{ __html: data?.description }}
+            ></Text>
             <Social>
               <Media1>
                 <Facebook />

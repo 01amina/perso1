@@ -109,7 +109,6 @@ const A = styled.p`
 
 const Button = styled(button)``;
 
-const list=[]
 const FAQ = ({ q, a }) => {
   return (
     <Item>
@@ -118,34 +117,27 @@ const FAQ = ({ q, a }) => {
     </Item>
   );
 };
-const List = ({li }) => {
+const List = ({ li }) => {
   return (
     <Ul>
       <Li>{li}</Li>
     </Ul>
-
   );
 };
-export const Section6 = ({data}) => {
+export const Section6 = ({ data }) => {
   return (
     <Section>
       <LeftSide>
         {data?.faq.map((item, i) => {
-          return <FAQ
-           key={i}
-           q={item.question} 
-           a={item.answer} />
-        })};
+          return <FAQ key={i} q={item.question} a={item.answer} />;
+        })}
       </LeftSide>
       <RightSide>
         <Title>{data?.right_side.title}</Title>
         <Subtitle>{data?.right_side.subtitle}</Subtitle>
         {data?.right_side.bullets.map((item, i) => {
-          return <List
-           key={i}
-           li={item.Item} 
-          />
-        })};
+          return <List key={i} li={item.Item} />;
+        })}
         <Button href={`tel:${PHONE_NUMBER}`}>
           <PhoneIcon />
           {PHONE_NUMBER}

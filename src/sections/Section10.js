@@ -49,21 +49,7 @@ const Text = styled.p`
   font-size: 1.2em;
   font-weight: bold;
 `;
-const Li = styled.li`
-  list-style: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  margin: 0;
-  ::before {
-    content: "✓";
-    font-family: fl-icons;
-    font-size: 20px;
-    color: rgb(122, 156, 89);
-  }
 
-  color: #fff;
-
-  margin-bottom: 20px;
-`;
 const S1 = styled.div`
   max-width: 1034px;
   min-height: 250px;
@@ -115,9 +101,25 @@ const Text1 = styled.p`
   color: black;
 `;
 
-const Ul = styled.ul`
-  line-height: 1.8;
-  font-size: 0.9em;
+const List = styled.div`
+  ul {
+    color: #fff;
+    font-size: 0.9em;
+    line-height: 1.8;
+    list-style: none;
+
+    li {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      margin: 0 0 20px;
+
+      ::before {
+        content: "✓";
+        font-family: fl-icons;
+        font-size: 20px;
+        color: rgb(122, 156, 89);
+      }
+    }
+  }
 `;
 const Table = styled.table`
   width: 100%;
@@ -143,13 +145,7 @@ const Image1 = styled.div`
     background-size: 250px;
   }
 `;
-const Item = ({ list }) => {
-  return (
-    <Ul>
-      <Li>{list}</Li>
-    </Ul>
-  );
-};
+
 export const Section10 = ({ data }) => {
   return (
     <Section>
@@ -163,12 +159,11 @@ export const Section10 = ({ data }) => {
       <Sect1>
         <T1>
           <Text>{data?.our_services.title}</Text>
-          {/*     
-    {data?.our_services.map((item, i) => {
-          return <Item
-           key={i}
-           list={item.services_list}  />
-        })}; */}
+          <List
+            dangerouslySetInnerHTML={{
+              __html: data?.our_services.services_list,
+            }}
+          ></List>
         </T1>
         <T2>
           <Text>OPENINGSTIJDEN</Text>

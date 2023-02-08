@@ -78,11 +78,11 @@ const Title = styled.h2`
 `;
 const Iteem = ({ title, image }) => {
   return (
-     <Item img={image}>
-       <ItemContent>
-         <Title>{title}</Title>
-       </ItemContent>
-     </Item>
+    <Item img={image}>
+      <ItemContent>
+        <Title>{title}</Title>
+      </ItemContent>
+    </Item>
   );
 };
 
@@ -90,18 +90,11 @@ export const Section4 = ({ data }) => {
   return (
     <Section>
       <Text>Onze diensten</Text>
-     <Items> {data?.map((item, i) => {
-        return (
-          
-          <Iteem
-            key={i}
-            image={item.image}
-            title={item.title}
-           
-          />
-        );
-      })}          </Items>
-
+      <Items>
+        {data?.map((item, i) => {
+          return <Iteem key={i} image={item.image} title={item.title} />;
+        })}{" "}
+      </Items>
     </Section>
   );
 };

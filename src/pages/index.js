@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import showdown from "showdown";
 import { HeroSection } from "@/sections/Hero";
 import { Section2 } from "@/sections/Section2";
 import { Section3 } from "@/sections/Section3";
@@ -25,11 +26,11 @@ export default function Home(props) {
         <Section3 data={data?.section_3} />
         <Section4 data={data?.section_4} />
         <Section5 data={data?.section_5} />
-       <Section6 data={data?.section_6} /> 
+        <Section6 data={data?.section_6} />
         <Section7 data={data?.section_7} />
         <Section8 data={data?.reviews} />
         <Section9 data={data?.section_9} />
-         <Section10 data={data?.section_10} /> 
+        <Section10 data={data?.section_10} />
       </main>
     </>
   );
@@ -41,6 +42,15 @@ export const getStaticProps = async () => {
     "utf8"
   );
   const matterData = matter(file);
+  const data = matterData.data;
+
+  const converter = new showdown.Converter();
+  data.section_7.text = converter.makeHtml(data.section_7.text);
+  data.section_9.description = converter.makeHtml(data.section_9.description);
+  data.section_10.our_services.services_list = converter.makeHtml(
+    data.section_10.our_services.services_list
+  );
+
   return {
     props: {
       data: matterData.data,
