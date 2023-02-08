@@ -1,7 +1,7 @@
 ---
 hero:
   title: SOS Elektricien
-  desc: ELEKTRICIEN NODIG? SCHAKEL ONSS DIRECT IN.
+  desc: ELEKTRICIEN NODIG? SCHAKEL ONS DIRECT IN.
   image: /images/hero.jpeg
 section_2:
   - title: Binnen 45 min. bij uuuuuuu
